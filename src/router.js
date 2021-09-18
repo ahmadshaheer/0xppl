@@ -6,7 +6,7 @@ import Feed from './pages/Feed'
 function Router() {
   return (
     <Switch>
-      <Route exact path='/' component={Feed} />
+      <Route path='/' component={Feed} />
     </Switch>
   )
 }
