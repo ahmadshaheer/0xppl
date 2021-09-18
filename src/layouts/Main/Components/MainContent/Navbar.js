@@ -5,6 +5,9 @@ import Searchbar from './Searchbar'
 import feed_icon from '../../../../assets/feed-icon.svg'
 import communities_icon from '../../../../assets/communities-icon.svg'
 import messages_icon from '../../../../assets/messages-icon.svg'
+const expandInput = () => {
+    alert('sd')
+}
 const Navbar = () => {
     return (
         <Wrapper>
@@ -24,6 +27,7 @@ const Navbar = () => {
 
             <Searchbar 
                 text="SEARCH"
+                onClick={expandInput}
             />
         </Wrapper>
     )

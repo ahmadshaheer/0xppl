@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import search_icon from '../../../../assets/search-icon.svg'
-
+let expanded = false;
+function expand () {
+    expanded = !expanded
+}
 const Searchbar = ({text}) => {
     return (
         <Wrapper >
             <label>
-                <input type="text" placeholder={text} />
+                <input onFocus={() => expand()}type="text" placeholder={text} />
             </label>
         </Wrapper>
     )
