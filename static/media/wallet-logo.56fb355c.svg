@@ -2,11 +2,11 @@
 <g filter="url(#filter0_d)">
 <circle cx="52" cy="48" r="40" fill="white"/>
 </g>
-<path d="M69 65V61C69 56.5817 64.9407 53 59.9333 53H44.0667C39.0593 53 35 56.5817 35 61V65" stroke="#141619" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M52 45C56.4183 45 60 41.4183 60 37C60 32.5817 56.4183 29 52 29C47.5817 29 44 32.5817 44 37C44 41.4183 47.5817 45 52 45Z" stroke="#141619" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M69 65V61C69 56.5817 64.9407 53 59.9333 53H44.0667C39.0593 53 35 56.5817 35 61V65" stroke="#141619" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M52 45C56.4183 45 60 41.4183 60 37C60 32.5817 56.4183 29 52 29C47.5817 29 44 32.5817 44 37C44 41.4183 47.5817 45 52 45Z" stroke="#141619" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
-<filter id="filter0_d" x="0" y="0" width="104" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_d" x="0" y="0" width="104" height="104" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="6"/>
