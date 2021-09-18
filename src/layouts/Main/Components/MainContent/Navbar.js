@@ -36,15 +36,6 @@ const Wrapper = styled.div`
     display: flex;
 
 
-    ${Searchbar}:focus + & {
-        background: #FFA689;
-    }
-    ${Searchbar}:invalid + & {
-        background: #FE2F75;
-    }
-    ${Searchbar}:valid + & {
-        background: #70EDB9;
-    }
 `
 
 export default Navbar
