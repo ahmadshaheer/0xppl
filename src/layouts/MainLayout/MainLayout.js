@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import MainContent from '../../components/MainContent/MainContent'
 import LeftSidebar from './Components/LeftSidebar'
-import MainContent from './Components/MainContent/MainContent'
 import RightSidebar from './Components/RightSidebar/RightSidebar'
 
 const MainLayout = (props) => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Filters from './Filters'
-import TopMenu from '~/../../src/layouts/MainLayout/Components/MainContent/TopMenu'
 import FeedPost from './FeedPost'
+import TopMenu from './TopMenu'
 
 const MainContent = () => {
     return (
