@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TopMenuItem = ({icon, text, active, search}) => {
+const TopMenuItem = ({icon, text, active, search, className}) => {
     return (
-        <Item search={search} active={active}>
+        <Item search={search} className={className} active={active}>
             <div className="icon">
                 <img src={icon} alt="" />
             </div>
