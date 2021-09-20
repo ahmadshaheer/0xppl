@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+html {
+  --color-black: #141619;
+  --color-grey: #687684;
+  --color-blue: #0648D7;
+  --color-light-grey: #B6BDC4;
+  --color-background: #F8F8F9;
+}
 
 body {
-  background: #F8F8F9;
+  background: var(--color-background);
 
+}
+a {
+  text-decoration: none;
 }
 * {
   margin: 0;
