@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import wallet_connect_logo from  'assets/wallet-icon.png'
+import wallet_connect_logo from  'src/assets//wallet-icon.png'
 import ConnectWalletsWrapper from './ConnectWalletsWrapper'
 const RightSidebar = () => {
     return (

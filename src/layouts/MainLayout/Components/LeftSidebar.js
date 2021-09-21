@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import profile_img from 'assets/default-profile-img.png'
-import logo from 'assets/0xppl-logo.png'
+import profile_img from 'src/assets//default-profile-img.png'
+import logo from 'src/assets//0xppl-logo.png'
 const LeftSidebar = () => {
     return (
         <Wrapper>

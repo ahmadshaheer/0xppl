@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import home_icon from 'assets/topmenu-home-icon.png'
-import communities_icon from 'assets/topmenu-communities-icon.png'
-import messages_icon from 'assets/topmenu-messages-icon.png'
-import search_icon from 'assets/topmenu-search-icon.png'
-import close_search_icon from 'assets/topmenu-search-close-icon.png'
-import profile_image from 'assets/search_result_profile.png'
+import home_icon from 'src/assets//topmenu-home-icon.png'
+import communities_icon from 'src/assets//topmenu-communities-icon.png'
+import messages_icon from 'src/assets//topmenu-messages-icon.png'
+import search_icon from 'src/assets//topmenu-search-icon.png'
+import close_search_icon from 'src/assets//topmenu-search-close-icon.png'
+import profile_image from 'src/assets//search_result_profile2.png'
 import TopMenuItem from './TopMenuItem'
+import SearchResultWrapper from './SearchResult/SearchResultWrapper'
 
 
 const TopMenu = () => {
@@ -52,29 +53,90 @@ const TopMenu = () => {
             </SearchWrapper>
             {/* search suggestion dropdown */}
             <SearchResultDropdown>
-                <div className="search-criteria">
-                    <div className="people">PEOPLE</div>
-                    <div className="parameters">Search parameters</div>
-                </div>
-                <div className="search-result">
-                    <div className="result">
-                        <div className="profile-image">
-                            <img src={profile_image} alt="" />
-                        </div>
-                        <div className="profile-details">
-                            <div className="info">
-                                <div className="user-name">
-                                    ethernity  
-                                </div>
-                                <div className="code">
-                                    0.x0D3A…2CEE
-                                </div>
-                            </div>
-                            <div className="total-stats">7 transactions</div>
-                        </div>
-
-                    </div>
-                </div>
+                <SearchResultWrapper
+                    type="people"
+                    results={
+                        [
+                            {
+                                profile_image: profile_image,
+                                user_name:'ethernity',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'7 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'methakovan',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'18 posts  18 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'prethanna',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'36 posts  12 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name: 'flippeth.eth',
+                                code: '0x0D3A…2CE4',
+                                total_stats: '41 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'Marc Ethreessen',
+                                code: '0x0D3A…2CEE',
+                                total_stats: '24 posts',
+                                search_term: 'Eth'
+                            }
+                        ]
+                    }
+                />
+                <SearchResultWrapper
+                    type="posts"
+                    results={
+                        [
+                            {
+                                profile_image: profile_image,
+                                user_name:'ethernity',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'7 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'methakovan',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'18 posts  18 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'prethanna',
+                                code:'0x0D3A…2CEE',
+                                total_stats:'36 posts  12 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name: 'flippeth.eth',
+                                code: '0x0D3A…2CE4',
+                                total_stats: '41 transactions',
+                                search_term: 'Eth'
+                            },
+                            {
+                                profile_image: profile_image,
+                                user_name:'Marc Ethreessen',
+                                code: '0x0D3A…2CEE',
+                                total_stats: '24 posts',
+                                search_term: 'Eth'
+                            }
+                        ]
+                    }
+                />
             </SearchResultDropdown>
 
         </Wrapper>
@@ -163,7 +225,7 @@ const SearchInput = styled.input`
     
     font-weight: 600;
     font-size: 0.875rem;
-    color: ##141619;
+    color: var(--color-black);
     :focus {
         outline: none;
     }
@@ -172,69 +234,15 @@ const SearchInput = styled.input`
 const SearchResultDropdown = styled.div`
     
 
-    padding: 1.875rem;
+    padding: 1.875rem 0;
     position: absolute;
     top: 3rem;
     background: #fff;
     left: 0;
     right: 0;
     height: 20rem;
-    .search-criteria {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-        font-weight: 400;
-        line-height: 1rem;
-        .people {
-            font-size: 0.875rem;
-            color: #687684;
 
-        }
-        .parameters {
-            color: #B6BDC4;
-            font-size: 0.75rem;
 
-        }
-
-    }
-
-    .search-result {
-        .result {
-            display: flex;
-            align-items: center;
-            
-            .profile-image {
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                    padding-right: 0.813rem;
-    
-                }
-            }
-            .profile-details {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-
-                
-                
-                
-                .info {
-                    user-name {
-
-                    }
-                    
-                    .code {
-        
-                    }
-    
-                }
-                .total-stats {
-    
-                }
-            }
-        }
-    }
 
     
 `
