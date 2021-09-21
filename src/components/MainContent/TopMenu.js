@@ -5,17 +5,29 @@ import communities_icon from 'src/assets//topmenu-communities-icon.png'
 import messages_icon from 'src/assets//topmenu-messages-icon.png'
 import search_icon from 'src/assets//topmenu-search-icon.png'
 import close_search_icon from 'src/assets//topmenu-search-close-icon.png'
-import profile_image from 'src/assets//search_result_profile2.png'
 import TopMenuItem from './TopMenuItem'
 import SearchResultWrapper from './SearchResult/SearchResultWrapper'
+
+// search result data
+import {people_search_results, activity_search_result} from 'src/data/search_result.js'
 
 
 const TopMenu = () => {
     
-    const [expanded_search, setExpandedSearch] = useState(true);
-    const [search_result_dropdown, setSearchSuggestionsDropdown] = useState(true);
-    
+    const [expanded_search, setExpandedSearch] = useState(false);
+    const [search_result_dropdown, setSearchResultsDropdown] = useState(false);
 
+    const [search_input_value, setSearchInputValue] = useState("");
+
+    // Input Field handler
+    const handleUserInput = (e) => {
+      setSearchInputValue(e.target.value);
+    };
+  
+    // Reset Input Field handler
+    const resetInputField = () => {
+      setSearchInputValue("");
+    };
 
     return (
         <Wrapper expanded_search={expanded_search} search_result_dropdown={search_result_dropdown}>
@@ -43,99 +55,25 @@ const TopMenu = () => {
                     onFocus={() => setExpandedSearch(true)} 
                     icon={search_icon} 
                     placeholder="SEARCH" 
-                    onKeyPress = {() => setSearchSuggestionsDropdown(true)} 
+                    onKeyPress = {() => setSearchResultsDropdown(true)}
+                    value = {search_input_value} 
+                    onChange={handleUserInput}
                 />
-                <button onClick={() => setExpandedSearch(false)} className="close-icon">
+                <button onClick={() => {setExpandedSearch(false);setSearchResultsDropdown(false);resetInputField();}} className="close-icon">
                     <img src={close_search_icon} alt="" />
                 </button>
 
 
             </SearchWrapper>
-            {/* search suggestion dropdown */}
+            {/* search result dropdown */}
             <SearchResultDropdown>
                 <SearchResultWrapper
                     type="people"
-                    results={
-                        [
-                            {
-                                profile_image: profile_image,
-                                user_name:'ethernity',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'7 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'methakovan',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'18 posts  18 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'prethanna',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'36 posts  12 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name: 'flippeth.eth',
-                                code: '0x0D3A…2CE4',
-                                total_stats: '41 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'Marc Ethreessen',
-                                code: '0x0D3A…2CEE',
-                                total_stats: '24 posts',
-                                search_term: 'Eth'
-                            }
-                        ]
-                    }
+                    results={people_search_results}
                 />
                 <SearchResultWrapper
-                    type="posts"
-                    results={
-                        [
-                            {
-                                profile_image: profile_image,
-                                user_name:'ethernity',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'7 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'methakovan',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'18 posts  18 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'prethanna',
-                                code:'0x0D3A…2CEE',
-                                total_stats:'36 posts  12 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name: 'flippeth.eth',
-                                code: '0x0D3A…2CE4',
-                                total_stats: '41 transactions',
-                                search_term: 'Eth'
-                            },
-                            {
-                                profile_image: profile_image,
-                                user_name:'Marc Ethreessen',
-                                code: '0x0D3A…2CEE',
-                                total_stats: '24 posts',
-                                search_term: 'Eth'
-                            }
-                        ]
-                    }
+                    type="activity"
+                    results={activity_search_result}
                 />
             </SearchResultDropdown>
 
@@ -187,8 +125,14 @@ const Wrapper = styled.div`
    
     ${({search_result_dropdown}) => search_result_dropdown ? `
         flex-direction: column;
-    ` : `
+        ${SearchResultDropdown} {
+            display: block;
+        }
+        ` : `
         height: 3rem;
+        ${SearchResultDropdown} {
+            display: none;
+        }
     `}
 
     

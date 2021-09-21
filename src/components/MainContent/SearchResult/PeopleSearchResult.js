@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import default_profile_image from  'src/assets/search_result_default_profile.png'
 
-const PeopleSearchResult = ({type, profile_image, user_name, code, total_stats, search_term}) => {
+const PeopleSearchResult = ({profile_image, user_name, code, total_stats, search_term}) => {
     return (
         <Wrapper href="/">
             <div className="profile-image">
@@ -11,9 +11,7 @@ const PeopleSearchResult = ({type, profile_image, user_name, code, total_stats, 
             </div>
             <div className="profile-details">
                 {/* if search term is present display the last option for specific search according */}
-                    <div className="search-all">Search all people for <span class="search-term">{search_term}</span></div>
-                    
-                    
+                    {search_term && <div className="search-all">Search all activity & posts for <span class="search-term">{search_term}</span></div> }
                 {/* end  */}
                 <div className="info">
                     <div className="user-name">

@@ -20,6 +20,7 @@ const SearchResultWrapper = ({results, type}) => {
             return <PeopleSearchResult
                     profile_image={item.profile_image}
                     user_name={item.user_name}
+                    code={item.code}
                     total_stats={item.total_stats}
                 />
             }
@@ -38,7 +39,11 @@ const SearchResultWrapper = ({results, type}) => {
             return <ActivitySearchResult
                     profile_image={item.profile_image}
                     user_name={item.user_name}
-                    total_stats={item.total_stats}
+                    activity_type={item.activity_type}
+                    activity_title={item.activity_title}
+                    activity_elapsed_time={item.activity_elapsed_time}
+                    purchased_type={item.purchased_type}
+                    purchased_amount={item.purchased_amount}
                 />
             }
         )

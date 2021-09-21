@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import default_profile_image from  'src/assets/search_result_default_profile.png'
 
-const ActivitySearchResult = ({type, profile_image, user_name, code, total_stats, search_term}) => {
+const ActivitySearchResult = ({profile_image, user_name, search_term, activity_type, activity_title, activity_elapsed_time, purchased_type, purchased_amount}) => {
     return (
         <Wrapper href="/">
             <div className="profile-image">
@@ -11,17 +11,32 @@ const ActivitySearchResult = ({type, profile_image, user_name, code, total_stats
             </div>
             <div className="profile-details">
                 {/* if search term is present display the last option for specific search according */}
-                    <div className="search-all">Search all activity & posts for <span class="search-term">{search_term}</span></div>
+                    {search_term && <div className="search-all">Search all activity & posts for <span class="search-term">{search_term}</span></div>}
                 {/* end  */}
                 <div className="info">
                     <div className="user-name">
                         {user_name}  
                     </div>
-                    <div className="code">
-                        {code}
+                    <div className="activity">
+                        <div className="type">{activity_type}</div>
+                        <div className="title">
+                            {
+                                activity_type === 'posted' && <div class="text">{activity_title}</div>
+                            }
+                            {
+                                activity_type === 'bought' && 
+                                                                <div className="purchased">
+                                                                    <span className="amount">{purchased_amount}</span>
+                                                                    of
+                                                                    <span className="type">{purchased_type}</span>
+                                                                </div>
+                            }
+                        </div>
+
+                        
                     </div>
                 </div>
-                <div className="total-stats">{total_stats}</div>
+                <div className="elapsed-time">{activity_elapsed_time}</div>
 
             </div>
 
@@ -70,15 +85,42 @@ const Wrapper = styled.a`
             .user-name {
                 color: var(--color-black);
                 font-weight: 600;
-                padding-right: 0.688rem;
+                padding: 0 0.344rem ;
             }
             
-            .code {
+            .activity {
+                .type {
+                    padding: 0 0.344rem ;
+                }
+                display: flex;
+                
+                .title {
+                    .text {
+                        font-weight: 600;
+                        font-size: 0.938rem;
+                    }
+                    
+                    .purchased {
+                        span {
+                            font-weight: 600;
+                            padding: 0 0.344rem ;
+
+                        }
+                        .amount {
+                        }
+                        .type {
+                            
+
+                        }
+
+                    }
+
+                }
 
             }
 
         }
-        .total-stats {
+        .elapsed-time {
             font-size: 0.813rem;
 
         }
