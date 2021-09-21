@@ -14,6 +14,7 @@ const SearchResultWrapper = ({results, type}) => {
                  
                 return <PeopleSearchResult
                         search_term={item.search_term}
+                        key={index}
                     />
             }
     
@@ -22,6 +23,7 @@ const SearchResultWrapper = ({results, type}) => {
                     user_name={item.user_name}
                     code={item.code}
                     total_stats={item.total_stats}
+                    key={index}
                 />
             }
         )
@@ -33,6 +35,7 @@ const SearchResultWrapper = ({results, type}) => {
                  
                 return <ActivitySearchResult
                         search_term={item.search_term}
+                        key={index}
                     />
             }
     
@@ -44,6 +47,7 @@ const SearchResultWrapper = ({results, type}) => {
                     activity_elapsed_time={item.activity_elapsed_time}
                     purchased_type={item.purchased_type}
                     purchased_amount={item.purchased_amount}
+                    key={index}
                 />
             }
         )

@@ -11,7 +11,7 @@ const ActivitySearchResult = ({profile_image, user_name, search_term, activity_t
             </div>
             <div className="profile-details">
                 {/* if search term is present display the last option for specific search according */}
-                    {search_term && <div className="search-all">Search all activity & posts for <span class="search-term">{search_term}</span></div>}
+                    {search_term && <div className="search-all">Search all activity & posts for <span className="search-term">{search_term}</span></div>}
                 {/* end  */}
                 <div className="info">
                     <div className="user-name">
@@ -21,7 +21,7 @@ const ActivitySearchResult = ({profile_image, user_name, search_term, activity_t
                         <div className="type">{activity_type}</div>
                         <div className="title">
                             {
-                                activity_type === 'posted' && <div class="text">{activity_title}</div>
+                                activity_type === 'posted' && <div className="text">{activity_title}</div>
                             }
                             {
                                 activity_type === 'bought' && 

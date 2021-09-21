@@ -11,7 +11,7 @@ const PeopleSearchResult = ({profile_image, user_name, code, total_stats, search
             </div>
             <div className="profile-details">
                 {/* if search term is present display the last option for specific search according */}
-                    {search_term && <div className="search-all">Search all activity & posts for <span class="search-term">{search_term}</span></div> }
+                    {search_term && <div className="search-all">Search all activity & posts for <span className="search-term">{search_term}</span></div> }
                 {/* end  */}
                 <div className="info">
                     <div className="user-name">
