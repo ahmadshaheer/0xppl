@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import ConnectWalletItem from './ConnectWalletItem'
-import metamask_icon from '~/../../src/assets/metamask-icon.png'
-import walletconnect_icon from '~/../../src/assets/walletconnect-icon.png'
-import coinbase_icon from '~/../../src/assets/coinbase-icon.png'
+import metamask_icon from 'assets/metamask-icon.png'
+import walletconnect_icon from 'assets/walletconnect-icon.png'
+import coinbase_icon from 'assets/coinbase-icon.png'
 const ConnectWalletsWrapper = ({className}) => {
     return (
         <Wrapper className={className}>

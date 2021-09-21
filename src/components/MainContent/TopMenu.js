@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import home_icon from '~/../../src/assets/topmenu-home-icon.png'
-import communities_icon from '~/../../src/assets/topmenu-communities-icon.png'
-import messages_icon from '~/../../src/assets/topmenu-messages-icon.png'
-import search_icon from '~/../../src/assets/topmenu-search-icon.png'
-import close_search_icon from '~/../../src/assets/topmenu-search-close-icon.png'
-import profile_image from '~/../../src/assets/search_result_profile.png'
+import home_icon from 'assets/topmenu-home-icon.png'
+import communities_icon from 'assets/topmenu-communities-icon.png'
+import messages_icon from 'assets/topmenu-messages-icon.png'
+import search_icon from 'assets/topmenu-search-icon.png'
+import close_search_icon from 'assets/topmenu-search-close-icon.png'
+import profile_image from 'assets/search_result_profile.png'
 import TopMenuItem from './TopMenuItem'
 
 

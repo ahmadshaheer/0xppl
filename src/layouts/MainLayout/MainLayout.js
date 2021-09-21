@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import MainContent from '../../components/MainContent/MainContent'
+import MainContent from 'components/MainContent/MainContent'
 import LeftSidebar from './Components/LeftSidebar'
 import RightSidebar from './Components/RightSidebar/RightSidebar'
 
