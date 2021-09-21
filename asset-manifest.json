@@ -1,30 +1,23 @@
 {
   "files": {
-    "main.css": "/0xppl/static/css/main.54f527e8.chunk.css",
-    "main.js": "/0xppl/static/js/main.e46dcc5a.chunk.js",
-    "main.js.map": "/0xppl/static/js/main.e46dcc5a.chunk.js.map",
-    "runtime-main.js": "/0xppl/static/js/runtime-main.f7b1d3c1.js",
-    "runtime-main.js.map": "/0xppl/static/js/runtime-main.f7b1d3c1.js.map",
-    "static/js/2.d45e4e8a.chunk.js": "/0xppl/static/js/2.d45e4e8a.chunk.js",
-    "static/js/2.d45e4e8a.chunk.js.map": "/0xppl/static/js/2.d45e4e8a.chunk.js.map",
-    "static/js/3.e316eda0.chunk.js": "/0xppl/static/js/3.e316eda0.chunk.js",
-    "static/js/3.e316eda0.chunk.js.map": "/0xppl/static/js/3.e316eda0.chunk.js.map",
+    "main.css": "/0xppl/static/css/main.12aca25f.chunk.css",
+    "main.js": "/0xppl/static/js/main.0ae984a7.chunk.js",
+    "main.js.map": "/0xppl/static/js/main.0ae984a7.chunk.js.map",
+    "runtime-main.js": "/0xppl/static/js/runtime-main.50b69648.js",
+    "runtime-main.js.map": "/0xppl/static/js/runtime-main.50b69648.js.map",
+    "static/js/2.a3847add.chunk.js": "/0xppl/static/js/2.a3847add.chunk.js",
+    "static/js/2.a3847add.chunk.js.map": "/0xppl/static/js/2.a3847add.chunk.js.map",
+    "static/js/3.12aa9e49.chunk.js": "/0xppl/static/js/3.12aa9e49.chunk.js",
+    "static/js/3.12aa9e49.chunk.js.map": "/0xppl/static/js/3.12aa9e49.chunk.js.map",
     "index.html": "/0xppl/index.html",
-    "static/css/main.54f527e8.chunk.css.map": "/0xppl/static/css/main.54f527e8.chunk.css.map",
-    "static/js/2.d45e4e8a.chunk.js.LICENSE.txt": "/0xppl/static/js/2.d45e4e8a.chunk.js.LICENSE.txt",
-    "static/media/coinbase-icon.14bb0ad4.svg": "/0xppl/static/media/coinbase-icon.14bb0ad4.svg",
-    "static/media/communities-icon.286c9c79.svg": "/0xppl/static/media/communities-icon.286c9c79.svg",
-    "static/media/feed-icon.0d441224.svg": "/0xppl/static/media/feed-icon.0d441224.svg",
-    "static/media/messages-icon.2309a170.svg": "/0xppl/static/media/messages-icon.2309a170.svg",
-    "static/media/metamask-icon.bc089a28.svg": "/0xppl/static/media/metamask-icon.bc089a28.svg",
-    "static/media/search-icon.1bf1a6a8.svg": "/0xppl/static/media/search-icon.1bf1a6a8.svg",
-    "static/media/wallet-logo.9ce13a14.svg": "/0xppl/static/media/wallet-logo.9ce13a14.svg",
-    "static/media/walletconnect-icon.fd0ebd3e.svg": "/0xppl/static/media/walletconnect-icon.fd0ebd3e.svg"
+    "static/css/main.12aca25f.chunk.css.map": "/0xppl/static/css/main.12aca25f.chunk.css.map",
+    "static/js/2.a3847add.chunk.js.LICENSE.txt": "/0xppl/static/js/2.a3847add.chunk.js.LICENSE.txt",
+    "static/media/wallet-icon.5f459c38.png": "/0xppl/static/media/wallet-icon.5f459c38.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f7b1d3c1.js",
-    "static/js/2.d45e4e8a.chunk.js",
-    "static/css/main.54f527e8.chunk.css",
-    "static/js/main.e46dcc5a.chunk.js"
+    "static/js/runtime-main.50b69648.js",
+    "static/js/2.a3847add.chunk.js",
+    "static/css/main.12aca25f.chunk.css",
+    "static/js/main.0ae984a7.chunk.js"
   ]
 }
