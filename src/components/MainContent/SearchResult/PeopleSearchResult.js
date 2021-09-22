@@ -80,6 +80,7 @@ const Wrapper = styled.a`
         }
         .total-stats {
             font-size: 0.813rem;
+            color: #B6BDC4;
 
         }
 

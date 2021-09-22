@@ -184,7 +184,7 @@ const SearchResultDropdown = styled.div`
     background: #fff;
     left: 0;
     right: 0;
-    height: 20rem;
+    filter: drop-shadow(0px 4px 12px rgba(104, 118, 132, 0.1));
 
 
 

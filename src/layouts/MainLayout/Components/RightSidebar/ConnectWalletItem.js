@@ -14,6 +14,10 @@ const ConnectWalletItem = ({icon_png, text, color}) => {
 }
 const Wrapper = styled.button`
     ${({color}) => color && `background: ${color}`};
+    &:hover {
+        filter: brightness(110%);
+    }
+    cursor: pointer;
     color: #fff;
     display: flex;
     align-items: center;
@@ -24,6 +28,7 @@ const Wrapper = styled.button`
     margin-bottom: .5rem;
     width: 15rem;
     height: 4rem;
+
 
     .text {
         font-weight: 600;

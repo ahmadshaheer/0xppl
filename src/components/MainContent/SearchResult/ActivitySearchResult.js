@@ -49,8 +49,17 @@ const Wrapper = styled.a`
     align-items: center;
     padding: .25rem 1.875rem .25rem 1.875rem;
     
+    &:hover .elapsed-time {
+        color: #687684 !important;
+    }
+    &:hover .type {
+        color: #687684 !important;
+
+    }
     &:hover {
         background: var(--color-background);
+        
+
     }
 
     .profile-image {
@@ -122,6 +131,8 @@ const Wrapper = styled.a`
         }
         .elapsed-time {
             font-size: 0.813rem;
+            color: #B6BDC4;
+
 
         }
 
