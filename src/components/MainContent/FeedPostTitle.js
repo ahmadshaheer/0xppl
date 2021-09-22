@@ -1,22 +1,58 @@
 import React from 'react'
-
+import styled from 'styled-components'
+import verified_profile_badge from 'src/assets/feed_post_profile_verified_badge.png'
+import verified_transaction_badge from 'src/assets/feed_post_transaction_verified_badge.png'
 const FeedPostTitle = ({name, verified, username, transaction, duration}) => {
     return (
-        <div className="top">
+        <Wrapper className="top">
             <div className="name">{name}</div>
-            <div className="verified"></div>
+            {verified && 
+                            <div className="verified">
+                                <img src={verified_profile_badge} alt="" />
+                            </div>
+            }
+            
             <div className="username">{username}</div>
             <div className="transaction">
                 <div className="hash">
                     {transaction.id}
                 </div>
-                <div className="status">
-                    {transaction.status}
+                <div className="verified">
+                    {transaction.verified &&  <img src={verified_transaction_badge} alt="" /> }
                 </div>
             </div>
             <div className="duraction">{duration}</div>
-        </div>
+        </Wrapper>
     )
 }
 
+const Wrapper = styled.div`
+    display: flex;
+    color: #687684;
+    font-size: 1rem;
+    line-height: 1.188rem;
+    margin-bottom: 0.25rem;
+    .name {
+        color: #141619;
+        font-weight: 600;
+    }
+    .verified {
+        margin-left: 0.313rem;
+        margin-right: 0.688rem;
+        img {
+            height: 0.625rem;
+            width: 0.625rem;
+        }
+
+
+    }
+    .username {
+        margin-right: 1rem;
+    }
+    .transaction {
+        display: flex;
+        
+        /* margin-right: 0.625rem; */
+    }
+`
 export default FeedPostTitle

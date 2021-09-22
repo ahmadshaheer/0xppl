@@ -1,7 +1,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import default_profile_image from  'src/assets/search_result_default_profile.png'
+import default_profile_image from  'src/assets/search_result_people_default_profile.png'
 
 const PeopleSearchResult = ({profile_image, user_name, code, total_stats, search_term}) => {
     return (
@@ -11,7 +11,7 @@ const PeopleSearchResult = ({profile_image, user_name, code, total_stats, search
             </div>
             <div className="profile-details">
                 {/* if search term is present display the last option for specific search according */}
-                    {search_term && <div className="search-all">Search all activity & posts for <span className="search-term">{search_term}</span></div> }
+                    {search_term && <div className="search-all">Search people for <span className="search-term">{search_term}</span></div> }
                 {/* end  */}
                 <div className="info">
                     <div className="user-name">

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import default_profile_image from  'src/assets/search_result_default_profile.png'
+import default_profile_image from  'src/assets/search_result_activity_default_profile.png'
 
 const ActivitySearchResult = ({profile_image, user_name, search_term, activity_type, activity_title, activity_elapsed_time, purchased_type, purchased_amount}) => {
     return (

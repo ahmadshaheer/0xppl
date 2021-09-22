@@ -1,44 +1,54 @@
 import React from 'react'
 import styled from 'styled-components'
+import FeedPostPlainText from './FeedPostPlainText'
 import FeedPostTitle from './FeedPostTitle'
+import FeedPostTotalInteractions from './FeedPostTotalInteractions'
 
-const FeedPost = () => {
+const FeedPost = ({image, name, verified, username, transaction, duration, type, comments_count, likes_count, content}) => {
     return (
         <Wrapper>
-
-            <div className="profile-img">
-                <img src="" alt="" />
+            <div className="profile-image">
+                <img src={image} alt="" />
             </div>
             <div className="content">
-                <FeedPostTitle 
-                    name="Marc Andreessen"
-                    verified={true}
-                    username="0xMarcA"
-                    transaction={{id: '0 x43A1…58S1', 'verified': true}}
-                    duration="40m"
-                />
                 
-                <Content className="details">
+                <FeedPostTitle 
+                    name={name}
+                    verified={verified}
+                    username={username}
+                    transaction={transaction}
+                    duration={duration}
+                />
 
-                </Content>
+                <FeedPostPlainText>
+                    {content}
+                </FeedPostPlainText>
 
-                <Interactions className="interactions">
-                    <div className="total-comments"></div>
-                    <div className="total-likes"></div>
-                </Interactions>
+                <FeedPostTotalInteractions
+                    comments_count={comments_count}
+                    likes_count={likes_count}
+                />
             </div>
         </Wrapper>
     )
 }
+
 const Wrapper = styled.div`
+    display: flex;
+    padding: 1.313rem 1.875rem;
+    &:not(:last-child) {
+        border-bottom: 1px dashed #ddd;
+    }
+    .profile-image {
+        img {
+            height: 4rem;
+            width: 4rem;
+        }
+        padding-right: 0.931rem;
+    }
+    .content {
 
-`
-
-const Content = styled.div`
-
-`
-
-const Interactions = styled.div`
+    }
 
 `
 

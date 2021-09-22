@@ -37,10 +37,7 @@ const TopMenu = () => {
                 icon={messages_icon}  
                 
             />
-            <SearchBar />
-            
-            {/* search result dropdown */}
-            
+            <SearchBar />            
             
 
         </Wrapper>

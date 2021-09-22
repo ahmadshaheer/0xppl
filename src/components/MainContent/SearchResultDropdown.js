@@ -21,7 +21,7 @@ const SearchResultDropdown = () => {
 }
 const Wrapper = styled.div`
     
-
+    opacity: 1;
     padding: 1.875rem 0;
     position: absolute;
     top: 3rem;

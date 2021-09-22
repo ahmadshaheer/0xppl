@@ -11,7 +11,11 @@ const SearchResultWrapper = ({results, type}) => {
         render_result = results.map( (item, index) => {
             
             if(results_length === index+1) {
-                 
+                /**
+                 * display the last option in search result i.e.
+                 * Search all people for search_term
+                 * 
+                 *  */  
                 return <PeopleSearchResult
                         search_term={item.search_term}
                         key={index}
@@ -32,7 +36,11 @@ const SearchResultWrapper = ({results, type}) => {
         render_result = results.map( (item, index) => {
             
             if(results_length === index+1) {
-                 
+                 /**
+                 * display the last option in search result i.e.
+                 * Search all activity & posts for search_term
+                 * 
+                 *  */  
                 return <ActivitySearchResult
                         search_term={item.search_term}
                         key={index}
