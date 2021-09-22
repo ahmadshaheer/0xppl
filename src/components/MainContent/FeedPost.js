@@ -33,7 +33,12 @@ const FeedPost = ({image, name, verified, username, transaction, duration, type,
     )
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
+    cursor: pointer;
+    :hover {
+        background: var(--color-background);
+
+    }
     display: flex;
     padding: 1.313rem 1.875rem;
     &:not(:last-child) {
