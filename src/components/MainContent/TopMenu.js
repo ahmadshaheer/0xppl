@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import home_icon from 'src/assets//topmenu-home-icon.png'
 import communities_icon from 'src/assets//topmenu-communities-icon.png'
@@ -8,6 +8,7 @@ import close_search_icon from 'src/assets//topmenu-search-close-icon.png'
 import TopMenuItem from './TopMenuItem'
 import SearchResultWrapper from './SearchResult/SearchResultWrapper'
 
+import {Context} from 'src/Store'
 // search result data
 import {people_search_results, activity_search_result} from 'src/data/search_result.js'
 
@@ -18,6 +19,8 @@ const TopMenu = () => {
     const [search_result_dropdown, setSearchResultsDropdown] = useState(false);
 
     const [search_input_value, setSearchInputValue] = useState("");
+
+    const [state, setState] = useContext(Context);
 
     // Input Field handler
     const handleUserInput = (e) => {
@@ -76,6 +79,7 @@ const TopMenu = () => {
                     results={activity_search_result}
                 />
             </SearchResultDropdown>
+            <h1>State: {state.name}</h1>
 
         </Wrapper>
     )

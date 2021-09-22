@@ -1,17 +1,14 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import Store from './Store'
 import Router from './router'
 const App = () => {
   return (
-    <div>
-
+    <Store>
       <BrowserRouter>
-        
-
-        
         <Router />
       </BrowserRouter>
-    </div>
+    </Store>
   )
 }
 
