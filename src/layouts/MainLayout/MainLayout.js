@@ -8,7 +8,9 @@ const MainLayout = (props) => {
     return (
         <Wrapper>
             <LeftSidebar />
-            <MainContent />
+            <MainContent >
+                {props.children}
+            </MainContent>
             <RightSidebar/> 
         </Wrapper>
     )

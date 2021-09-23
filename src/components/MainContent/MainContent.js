@@ -4,13 +4,14 @@ import FeedPostsWrapper from './FeedPost/FeedPostsWrapper'
 import Filters from './Filters'
 import TopMenu from './TopMenu'
 
-const MainContent = () => {
+const MainContent = ({children}) => {
 
     return (
         <Wrapper >
             <TopMenu></TopMenu>
             <Filters></Filters>
             <FeedPostsWrapper></FeedPostsWrapper>
+            {children}
         </Wrapper>
     )
 }
