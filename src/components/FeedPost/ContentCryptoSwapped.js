@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ContentPurchased = () => {
+const ContentCryptoSwapped = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const ContentPurchased = () => {
     )
 }
 
-export default ContentPurchased
+export default ContentCryptoSwapped

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import FeedPostsWrapper from './FeedPost/FeedPostsWrapper'
+import FeedPostsWrapper from '../FeedPost/FeedPostsWrapper'
 import Filters from './Filters'
 import TopMenu from './TopMenu'
 

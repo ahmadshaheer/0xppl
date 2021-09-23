@@ -6,15 +6,15 @@ import { HelmetProvider } from 'react-helmet-async'
 import { ErrorBoundary } from 'react-error-boundary'
 const App = () => {
   return (
-    <HelmetProvider>
-      <Store>
-        <ErrorBoundary>
+    <Store>
+      <ErrorBoundary>
+        <HelmetProvider>
           <BrowserRouter>
             <Router />
           </BrowserRouter>
-        </ErrorBoundary>
-      </Store>
-    </HelmetProvider>
+        </HelmetProvider>
+      </ErrorBoundary>
+    </Store>
   )
 }
 

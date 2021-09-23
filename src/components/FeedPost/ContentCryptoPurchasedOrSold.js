@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const ContentSwapped = () => {
+const ContentCryptoPurchasedOrSold = () => {
     return (
         <div>
             
         </div>
     )
 }
+
+export default ContentCryptoPurchasedOrSold
