@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import FeedPostsWrapper from './FeedPost/FeedPostsWrapper'
 import Filters from './Filters'
-import FeedPostsWrapper from './FeedPostsWrapper'
 import TopMenu from './TopMenu'
 
 const MainContent = () => {

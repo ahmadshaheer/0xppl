@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+const TopMenuItem = (props) => {
 
-const TopMenuItem = ({icon, text, active, search, className}) => {
+    const {icon, text, active, search, className} = props
     return (
         <Item search={search} className={className} active={active}>
             <div className="icon">
@@ -44,4 +46,9 @@ const Item = styled.button`
     }
 `
 
+TopMenuItem.propTypes = {
+    icon: PropTypes.string,
+    text: PropTypes.string,
+    active: PropTypes.bool,
+}
 export default TopMenuItem

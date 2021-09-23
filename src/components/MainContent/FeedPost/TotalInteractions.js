@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import styled from 'styled-components'
 import comment_icon from 'src/assets/feed_post_comment_icon.png'
 import like_icon from 'src/assets/feed_post_like_icon.png'
-import styled from 'styled-components'
-const FeedPostTotalInteractions = ({comments_count, likes_count}) => {
+
+const TotalInteractions = (props) => {
+    const {comments_count, likes_count} = props
     return (
         <Wrapper>
             <div className="total-interactions">
@@ -48,10 +51,10 @@ const Wrapper = styled.div`
 
 `
 
-FeedPostTotalInteractions.protoTypes = {
+TotalInteractions.protoTypes = {
     comments_count: PropTypes.number,
     likes_count: PropTypes.number,
 
 }
 
-export default FeedPostTotalInteractions
+export default TotalInteractions

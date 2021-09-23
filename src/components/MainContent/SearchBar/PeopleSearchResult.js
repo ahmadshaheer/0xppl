@@ -1,9 +1,11 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import default_profile_image from  'src/assets/search_result_people_default_profile.png'
 
-const PeopleSearchResult = ({profile_image, user_name, code, total_stats, search_term}) => {
+const PeopleSearchResult = (props) => {
+    const {profile_image, user_name, code, total_stats, search_term} = props
     return (
         <Wrapper href="/">
             <div className="profile-image">
@@ -86,4 +88,13 @@ const Wrapper = styled.a`
 
     }
 `
+
+PeopleSearchResult.propTypes = {
+    profile_image: PropTypes.string, 
+    user_name: PropTypes.string, 
+    code: PropTypes.string, 
+    total_stats: PropTypes.string, 
+    search_term: PropTypes.string,
+
+}
 export default PeopleSearchResult

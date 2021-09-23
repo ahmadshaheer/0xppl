@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import FeedPost from './FeedPost';
 
 import {feed_posts} from 'src/data/feed_posts'
+import FeedPost from './FeedPost'
 const FeedPostsWrapper = () => {
 
 

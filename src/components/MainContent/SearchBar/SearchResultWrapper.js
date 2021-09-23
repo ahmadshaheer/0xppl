@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import ActivitySearchResult from './ActivitySearchResult';
-import PeopleSearchResult from './PeopleSearchResult';
-
+import {ActivitySearchResult, PeopleSearchResult} from './Index'
+import PropTypes from 'prop-types'
 const SearchResultWrapper = ({results, type}) => {
 
     const results_length = results.length
@@ -107,5 +106,10 @@ const Wrapper = styled.div`
         margin: 1rem 0;
     }
 `
+
+SearchResultWrapper.propTypes = {
+    results: PropTypes.array, 
+    type: PropTypes.string 
+}
 
 export default SearchResultWrapper

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ConnectWalletItem = ({icon_png, text, color}) => {
+const ConnectWalletItem = (props) => {
+    const {icon_png, text, color} = props
     return (
         <Wrapper color={color}>
             <div className="text">{text}</div>

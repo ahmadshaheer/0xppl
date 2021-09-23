@@ -1,8 +1,8 @@
 import React from 'react'
-import SearchResultWrapper from './SearchResult/SearchResultWrapper'
 // search result data
 import {people_search_results, activity_search_result} from 'src/data/search_result.js'
 import styled from 'styled-components'
+import {SearchResultWrapper} from './Index'
 
 const SearchResultDropdown = () => {
     return (

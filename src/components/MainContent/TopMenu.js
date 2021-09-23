@@ -6,7 +6,7 @@ import messages_icon from 'src/assets//topmenu-messages-icon.png'
 import TopMenuItem from './TopMenuItem'
 
 import {Context} from 'src/Store'
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar/SearchBar'
 
 
 const TopMenu = () => {

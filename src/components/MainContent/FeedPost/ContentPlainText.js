@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FeedPostPlainText = ({children}) => {
+const ContentPlainText = ({children}) => {
     return (
         <Wrapper>
             {children}
@@ -15,4 +15,4 @@ const Wrapper = styled.div`
     line-height: 1.375rem;
 `
 
-export default FeedPostPlainText
+export default ContentPlainText

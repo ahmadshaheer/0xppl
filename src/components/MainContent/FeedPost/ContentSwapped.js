@@ -1,11 +1,9 @@
 import React from 'react'
 
-const FeedPostContent = () => {
+export const ContentSwapped = () => {
     return (
         <div>
             
         </div>
     )
 }
-
-export default FeedPostContent

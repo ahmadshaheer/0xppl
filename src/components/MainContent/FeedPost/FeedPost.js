@@ -1,10 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import FeedPostPlainText from './FeedPostPlainText'
-import FeedPostTitle from './FeedPostTitle'
-import FeedPostTotalInteractions from './FeedPostTotalInteractions'
+import PropTypes from 'prop-types'
+import {ContentPlainText, Title, TotalInteractions} from './Index'
 
-const FeedPost = ({image, name, verified, username, transaction, duration, type, comments_count, likes_count, content}) => {
+const FeedPost = (props) => {
+
+    const {
+        image, 
+        name, 
+        verified, 
+        username, 
+        transaction, 
+        duration, 
+        type, 
+        comments_count, 
+        likes_count, 
+        content} = props
     return (
         <Wrapper>
             <div className="profile-image">
@@ -12,7 +23,7 @@ const FeedPost = ({image, name, verified, username, transaction, duration, type,
             </div>
             <div className="content">
                 
-                <FeedPostTitle 
+                <Title 
                     name={name}
                     verified={verified}
                     username={username}
@@ -20,11 +31,11 @@ const FeedPost = ({image, name, verified, username, transaction, duration, type,
                     duration={duration}
                 />
 
-                <FeedPostPlainText>
+                <ContentPlainText>
                     {content}
-                </FeedPostPlainText>
+                </ContentPlainText>
 
-                <FeedPostTotalInteractions
+                <TotalInteractions
                     comments_count={comments_count}
                     likes_count={likes_count}
                 />
@@ -56,5 +67,18 @@ const Wrapper = styled.a`
     }
 
 `
+
+FeedPost.propTypes = {
+    image: PropTypes.string,
+    name: PropTypes.string,
+    verified: PropTypes.bool,
+    username: PropTypes.string,
+    transaction: PropTypes.object,
+    duration: PropTypes.string,
+    type: PropTypes.string,
+    likes_count: PropTypes.number,
+    comments_count: PropTypes.number,
+    content: PropTypes.string,
+}
 
 export default FeedPost

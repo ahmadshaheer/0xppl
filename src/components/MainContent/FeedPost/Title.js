@@ -2,7 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import verified_profile_badge from 'src/assets/feed_post_profile_verified_badge.png'
 import verified_transaction_badge from 'src/assets/feed_post_transaction_verified_badge.png'
-const FeedPostTitle = ({name, verified, username, transaction, duration}) => {
+
+const Title = (props) => {
+
+    const {name, verified, username, transaction, duration} = props
     return (
         <Wrapper className="top">
             <div className="name">{name}</div>
@@ -55,4 +58,4 @@ const Wrapper = styled.div`
         /* margin-right: 0.625rem; */
     }
 `
-export default FeedPostTitle
+export default Title
