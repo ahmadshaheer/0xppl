@@ -1,7 +1,7 @@
 import SeoMeta from 'src/components/SeoMeta';
 import { metaTags } from 'src/helpers/seo';
 import React, { Component } from 'react'
-import MainLayout from '../layouts/MainLayout/MainLayout'
+import MainLayout from '../layouts/MainLayout'
 import {ErrorBoundary} from 'react-error-boundary'
 import ErrorFallback from 'src/components/Errors/ErrorFallback';
 
