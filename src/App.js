@@ -2,16 +2,16 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import Store from './Store'
 import Router from './router'
-import { Helmet } from 'react-helmet'
+import { HelmetProvider } from 'react-helmet-async'
 const App = () => {
   return (
-    <Store>
-      {/* <Helmet> */}
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      {/* </Helmet> */}
-    </Store>
+    <HelmetProvider>
+      <Store>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+      </Store>
+    </HelmetProvider>
   )
 }
 

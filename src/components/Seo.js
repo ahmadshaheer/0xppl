@@ -1,12 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Seo = () => {
+const Seo = ({title, meta}) => {
+    const meta_tags = meta.map(item => <meta name={item.name} content={item.content}  />)
+
     return (
-        <div>
-            <title>My Title</title>
-            <meta name="description" content="Helmet application" />
-        </div>
+        <Helmet>
+            <title>{title}</title>
+            {meta_tags}
+        </Helmet>
     )
 }
-
+Seo.proptypes = {
+    title: PropTypes.string,
+    meta: PropTypes.array,
+}
 export default Seo

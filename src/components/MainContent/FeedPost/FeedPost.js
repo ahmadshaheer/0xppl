@@ -31,9 +31,7 @@ const FeedPost = (props) => {
                     duration={duration}
                 />
 
-                <ContentPlainText>
-                    {content}
-                </ContentPlainText>
+                {type && <ContentPlainText>{content}</ContentPlainText>}
 
                 <TotalInteractions
                     comments_count={comments_count}
