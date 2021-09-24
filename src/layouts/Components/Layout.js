@@ -1,29 +1,21 @@
 import { Sticky } from 'src/components/Sidebars'
 import React from 'react'
 import styled from 'styled-components'
+import {TopLogo} from './'
 
 const Layout = (props) => {
-    const {leftSidebar, rightSidebar, children} = props
+    const {justifyContent, leftSidebar, rightSidebar, children, topLogo} = props
     return (
-        <Wrapper>
+        <Wrapper justifyContent={justifyContent}>
+            {topLogo && <TopLogo />}
             <Sticky
-                sticky={leftSidebar.sticky}
-                widthInRem={leftSidebar.widthInRem}
-                topInRem={leftSidebar.topInRem}
-                marginLeftInRem={leftSidebar.marginLeftInRem}
-                marginRightInRem={leftSidebar.marginRightInRem}
-                contentsComponent={leftSidebar.contentsComponent}
+                {...leftSidebar}
             />
 
                 {children}
 
             <Sticky
-                sticky={rightSidebar.sticky}
-                widthInRem={rightSidebar.widthInRem}
-                topInRem={rightSidebar.topInRem}
-                marginLeftInRem={rightSidebar.marginLeftInRem}
-                marginRightInRem={rightSidebar.marginRightInRem}
-                contentsComponent={rightSidebar.contentsComponent}
+                {...rightSidebar}
             />
 
 
@@ -37,8 +29,10 @@ const Wrapper = styled.div`
     * *- |--|---|--|
     * *- Left Sidebar | Main Content | Right Sidebar
      */
-     display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* ${({justifyContent}) => justifyContent && `
+        justify-content: ${justifyContent};
+    `}; */
     margin-top: 1.25rem;
     height: 1400px;
 `

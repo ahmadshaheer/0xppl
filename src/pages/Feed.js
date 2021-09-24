@@ -8,7 +8,7 @@ import { FeedPostsWrapper } from 'src/components/FeedPost';
 class Feed extends Component {
 
     render() {
-        const meta = metaTags('feeds');
+        const meta = metaTags('feed');
         return (
             <>
 

@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Filters from 'src/components/MenuBar/Filters'
 import TopMenu from 'src/components/MenuBar/TopMenu'
 
-const MainContent = ({children}) => {
+const MainContent = ({children, widthInRem}) => {
 
     return (
-        <Wrapper >
+        <Wrapper widthInRem={widthInRem}>
             <TopMenu></TopMenu>
             <Filters></Filters>
             <Content>
@@ -18,7 +18,14 @@ const MainContent = ({children}) => {
 }
 
 const Wrapper = styled.div`
-    flex-basis: 45rem;
+    
+    ${({widthInRem}) => widthInRem ? `
+        width: ${widthInRem}rem;
+    ` : `width: 45rem;`}
+    min-height: 55rem;
+    margin: 0 auto;
+
+
     background: #fff;
     
     filter: drop-shadow(0px 4px 12px rgba(104, 118, 132, 0.1));

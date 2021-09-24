@@ -7,12 +7,14 @@ const CommunitiesLayout = ({children}) => {
     return (
         <>
             <Layout
+                justifyContent="space-between"
                 leftSidebar= {
                     {
+                        topInRem:5.625,
+                        leftInRem: 7.188,
                         sticky:true,
                         widthInRem:14.125,
-                        topInRem:4.375,
-                        marginLeftInRem:7.188, 
+                        marginRightInRem:7, 
                         contentsComponent: MainLayoutLeftSidebar
                     }
                 }
@@ -21,14 +23,15 @@ const CommunitiesLayout = ({children}) => {
                     {
                         sticky: true,
                         widthInRem: 15,
-                        topInRem: 11.563,
-                        marginRightInRem: 7.188,
+                        topInRem: 12.813,
+                        rightInRem: 5.75,
+                        marginLeftInRem: 6.25,
                         contentsComponent: MainLayoutRightSidebar
                     }
                 }
             >
             
-                <MainContent children={children} />
+                <MainContent widthInRem={46.563} children={children} />
 
             </Layout>
             
