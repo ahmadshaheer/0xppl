@@ -13,7 +13,7 @@ const MessagesLayout = ({children}) => {
                     {
                         topInRem:5.438,
                         leftInRem: 2.5,
-                        widthInRem:28.625,
+                        widthInRem:27.875,
                         background: "#fff",
                         contentsComponent: MessagesLayoutLeftSidebar
                     }
@@ -25,7 +25,7 @@ const MessagesLayout = ({children}) => {
                         paddingBottomInRem: 4.25,
                         paddingRightInRem: 4.625,
                         paddingLeftInRem: 4.813,
-                        widthInRem: 19.438,
+                        widthInRem: 11.375,
                         topInRem: 0,
                         bottomInRem: 0,
                         rightInRem: 0,
