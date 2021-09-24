@@ -6,7 +6,7 @@ import FeedPost from './FeedPost'
 const FeedPostsWrapper = () => {
 
 
-    let feeds = feed_posts.map((post, index) => <FeedPost
+    let feed = feed_posts.map((post, index) => <FeedPost
                                 image={post.image}
                                 
                                 name={post.name}
@@ -24,7 +24,7 @@ const FeedPostsWrapper = () => {
                         )
     return (
         <Wrapper>
-            {feeds}
+            {feed}
         </Wrapper>
     )
 }

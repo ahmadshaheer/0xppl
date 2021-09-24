@@ -24,7 +24,7 @@ const TopMenu = () => {
             <TopMenuItem 
                 text="FEED" 
                 icon={home_icon}
-                route="/feeds" 
+                route="/feed" 
                 active={true}
             />
 

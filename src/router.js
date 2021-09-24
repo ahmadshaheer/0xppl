@@ -20,11 +20,11 @@ import {MainLayout, MessagesLayout, CommunitiesLayout} from 'src/layouts';
 function Router() {
   return (
     <Switch>
-      <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/feed' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
       <DynamicLayoutRouter  exact path='/messages' layout={MessagesLayout} component={Messages}></DynamicLayoutRouter>
       <DynamicLayoutRouter  exact path='/communities' layout={CommunitiesLayout} component={Communities}></DynamicLayoutRouter>
       
-      <Route render={() => <Redirect to="/feeds" />} />
+      <Route render={() => <Redirect to="/feed" />} />
 
     </Switch>
   )

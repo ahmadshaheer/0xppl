@@ -1,13 +1,13 @@
 export function metaTags(page) {
     let meta = {};
     switch(page) {
-        case 'feeds':
+        case 'feed':
             meta = {
-                title: 'Feeds',
+                title: 'Feed',
                 meta: [
                     {
                         name: "description",
-                        content: "A good description about the Feeds",
+                        content: "A good description about the Feed",
                     },
                     {
                         name: "keywords",
