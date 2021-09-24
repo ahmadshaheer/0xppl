@@ -19,11 +19,12 @@ function Router() {
   return (
     <Switch>
       {/* <Route path='/' component={Feed} /> */}
-      <DynamicLayoutRouter  exact path='/'>
-        <Redirect to="/feeds" />
-      </DynamicLayoutRouter>
       <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
       <DynamicLayoutRouter  exact path='/messages' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
+      
+      <DynamicLayoutRouter>
+        <Redirect to="/feeds" />
+      </DynamicLayoutRouter>
     </Switch>
   )
 }
