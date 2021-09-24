@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import FeedPostsWrapper from '../../components/FeedPost/FeedPostsWrapper'
-import Filters from './MenuBar/Filters'
-import TopMenu from './MenuBar/TopMenu'
+import Filters from '../../components/MenuBar/Filters'
+import TopMenu from '../../components/MenuBar/TopMenu'
 
 const MainContent = ({children}) => {
 

@@ -2,7 +2,7 @@ import React from 'react'
 // search result data
 import {people_search_results, activity_search_result} from 'src/data/search_result.js'
 import styled from 'styled-components'
-import {SearchResultWrapper} from './Index'
+import {SearchResultWrapper} from '.'
 
 const SearchResultDropdown = () => {
     return (

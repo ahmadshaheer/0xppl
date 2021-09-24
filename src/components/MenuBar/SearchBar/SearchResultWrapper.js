@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {ActivitySearchResult, PeopleSearchResult} from './Index'
+import {ActivitySearchResult, PeopleSearchResult} from '.'
 import PropTypes from 'prop-types'
 const SearchResultWrapper = ({results, type}) => {
 

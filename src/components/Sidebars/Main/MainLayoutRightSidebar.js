@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import wallet_connect_logo from  'src/assets//wallet-icon.png'
 import ConnectWalletsWrapper from './ConnectWalletsWrapper'
-const RightSidebar = () => {
+const MainLayoutRightSidebar = () => {
     return (
         <Wrapper>
             <img className="connect-wallet-icon" src={wallet_connect_logo} alt="" />
@@ -28,14 +28,6 @@ const RightSidebar = () => {
     )
 }
 const Wrapper = styled.div`
-    /* width */
-    flex-basis: 15rem;
-    /* sticky */
-    position: sticky;
-    align-self: flex-start;
-    /* top space relative to the top gap from navbar */
-    top: 11.563rem;
-    height: 18.25rem;
 
     .connect-wallet-icon {
         width: 5rem;
@@ -82,4 +74,4 @@ const Wrapper = styled.div`
 
     }
 `
-export default RightSidebar
+export default MainLayoutRightSidebar

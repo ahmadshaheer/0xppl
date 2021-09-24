@@ -1,17 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
 import MainContent from './Components/MainContent'
-import LeftSidebar from './Components/LeftSidebar'
-import RightSidebar from './Components/RightSidebar/RightSidebar'
 
-const MainLayout = (props) => {
+import {MainLayoutLeftSidebar, MainLayoutRightSidebar} from 'src/components/Sidebars/Main'
+import Layout from './Components/Layout'
+
+const MainLayout = ({children}) => {
     return (
         <Wrapper>
-            <LeftSidebar />
-            <MainContent >
-                {props.children}
-            </MainContent>
-            <RightSidebar/> 
+            <Layout
+                leftSidebar= {
+                    {
+                        sticky:true,
+                        widthInRem:14.125,
+                        topInRem:4.375,
+                        marginLeftInRem:7.188, 
+                        contentsComponent: MainLayoutLeftSidebar
+                    }
+                }
+
+                rightSidebar={
+                    {
+                        sticky: true,
+                        widthInRem: 15,
+                        topInRem: 11.563,
+                        marginRightInRem: 7.188,
+                        contentsComponent: MainLayoutRightSidebar
+                    }
+                }
+            >
+            
+
+                <MainContent>
+                {children}
+                </MainContent>
+
+            </Layout>
+            
         </Wrapper>
     )
 }
@@ -28,7 +53,8 @@ const Wrapper = styled.div`
      */
     display: flex;
     justify-content: space-between;
-    margin: 1.25rem 5.75rem  0 7.188rem;
+    /* margin: 1.25rem 5.75rem  0 7.188rem; */
+    margin-top: 1.25rem;
     height: 1400px;
     
 

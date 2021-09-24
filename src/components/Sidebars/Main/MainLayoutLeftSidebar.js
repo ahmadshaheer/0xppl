@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import profile_img from 'src/assets//default-profile-img.png'
 import logo from 'src/assets//0xppl-logo.png'
-const LeftSidebar = () => {
+
+const MainLayoutLeftSidebar = () => {
     return (
         <Wrapper>
             <img className="profile-img" src={profile_img} alt="" />
@@ -36,12 +37,6 @@ const LeftSidebar = () => {
     )
 }
 const Wrapper = styled.div`
-    /* margin-top: 4.375rem; */
-    flex-basis: 14.125rem;
-    position: sticky;
-    align-self: flex-start;
-    top: 4.375rem;
-    height: 18.25rem;
     
     .profile-img {
         width: 4rem;
@@ -79,4 +74,5 @@ const Wrapper = styled.div`
         }
     }
 `
-export default LeftSidebar
+
+export default MainLayoutLeftSidebar

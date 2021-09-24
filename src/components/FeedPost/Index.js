@@ -7,9 +7,3 @@ import FeedPostsWrapper from './FeedPostsWrapper.js'
 
 export {FeedPost, ContentPlainText, Title, TotalInteractions, FeedPostsWrapper}
 
-
-const Index = () => {
-    
-}
-
-export default Index
