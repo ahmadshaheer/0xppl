@@ -28,7 +28,8 @@ const MessagesLayout = ({children}) => {
                 }
             >
             
-                <MainContent children={children} />
+                {/* <MainContent children={children} /> */}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deleniti et tempore unde ipsum reprehenderit cum vel facilis, obcaecati, culpa eligendi beatae nihil tenetur quis, minus odit reiciendis laudantium. Nulla.
 
             </Layout>
             

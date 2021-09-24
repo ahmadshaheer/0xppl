@@ -1,9 +1,9 @@
 // import Loading from 'src/components/Loading';
 import React from 'react'
-import { Redirect, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import Feed from './pages/Feed';
 import { DynamicLayoutRouter } from 'src/helpers/layouts';
-import {MainLayout} from 'src/layouts';
+import {MainLayout, MessagesLayout} from 'src/layouts';
 // import CommunitiesLayout from 'src/layouts/CommunitiesLayout';
 // import MessagesLayout from 'src/layouts/MessagesLayout';
 // import Loadable from 'react-loadable';
@@ -18,13 +18,11 @@ import {MainLayout} from 'src/layouts';
 function Router() {
   return (
     <Switch>
-      {/* <Route path='/' component={Feed} /> */}
       <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
-      <DynamicLayoutRouter  exact path='/messages' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/messages' layout={MessagesLayout} component={Feed}></DynamicLayoutRouter>
       
-      <DynamicLayoutRouter component={() => <Redirect to={{pathname: "/feeds"}} />}>
-        <Redirect to="/feeds" />
-      </DynamicLayoutRouter>
+      <Route render={() => <Redirect to="/feeds" />} />
+
     </Switch>
   )
 }
