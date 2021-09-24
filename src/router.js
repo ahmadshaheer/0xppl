@@ -1,6 +1,6 @@
 // import Loading from 'src/components/Loading';
 import React from 'react'
-import { Switch } from 'react-router-dom'
+import { Redirect, Switch } from 'react-router-dom'
 import Feed from './pages/Feed';
 import { DynamicLayoutRouter } from 'src/helpers/layouts';
 import {MainLayout} from 'src/layouts';
@@ -19,7 +19,11 @@ function Router() {
   return (
     <Switch>
       {/* <Route path='/' component={Feed} /> */}
-      <DynamicLayoutRouter  path='/' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/'>
+        <Redirect to="/feeds" />
+      </DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/messages' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
     </Switch>
   )
 }

@@ -1,11 +1,11 @@
 import { Sticky } from 'src/components/Sidebars'
 import React from 'react'
+import styled from 'styled-components'
 
 const Layout = (props) => {
     const {leftSidebar, rightSidebar, children} = props
-    console.log(rightSidebar)
     return (
-        <>
+        <Wrapper>
             <Sticky
                 sticky={leftSidebar.sticky}
                 widthInRem={leftSidebar.widthInRem}
@@ -27,8 +27,19 @@ const Layout = (props) => {
             />
 
 
-        </>
+        </Wrapper>
     )
 }
+const Wrapper = styled.div`
 
+    /**
+    * *- Overall Layout with margins from each side
+    * *- |--|---|--|
+    * *- Left Sidebar | Main Content | Right Sidebar
+     */
+     display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    height: 1400px;
+`
 export default Layout
