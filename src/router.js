@@ -22,7 +22,7 @@ function Router() {
       <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
       <DynamicLayoutRouter  exact path='/messages' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
       
-      <DynamicLayoutRouter>
+      <DynamicLayoutRouter component={() => <Redirect to={{pathname: "/feeds"}} />}>
         <Redirect to="/feeds" />
       </DynamicLayoutRouter>
     </Switch>
