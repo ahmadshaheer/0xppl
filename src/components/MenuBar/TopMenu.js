@@ -23,18 +23,21 @@ const TopMenu = () => {
 
             <TopMenuItem 
                 text="FEED" 
-                icon={home_icon} 
-                active={true} 
+                icon={home_icon}
+                route="/feeds" 
+                active={true}
             />
 
             <TopMenuItem 
                 text="COMMUNITIES" 
-                icon={communities_icon}  
+                icon={communities_icon}
+                route="/communities"  
             />
 
             <TopMenuItem 
                 text="MESSAGES" 
-                icon={messages_icon}  
+                icon={messages_icon}
+                route="/messages"  
                 
             />
             <SearchBar />            
@@ -69,7 +72,7 @@ const Wrapper = styled.div`
         * hide the exit button
     */ 
     ${({search_bar_expanded}) => search_bar_expanded ? `
-        > button {
+        > a {
             display: none;
         }
     ` : `

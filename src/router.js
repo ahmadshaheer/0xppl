@@ -2,8 +2,10 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import Feed from './pages/Feed';
+import Messages from './pages/Messages';
+import Communities from './pages/Communities';
 import { DynamicLayoutRouter } from 'src/helpers/layouts';
-import {MainLayout, MessagesLayout} from 'src/layouts';
+import {MainLayout, MessagesLayout, CommunitiesLayout} from 'src/layouts';
 // import CommunitiesLayout from 'src/layouts/CommunitiesLayout';
 // import MessagesLayout from 'src/layouts/MessagesLayout';
 // import Loadable from 'react-loadable';
@@ -19,7 +21,8 @@ function Router() {
   return (
     <Switch>
       <DynamicLayoutRouter  exact path='/feeds' layout={MainLayout} component={Feed}></DynamicLayoutRouter>
-      <DynamicLayoutRouter  exact path='/messages' layout={MessagesLayout} component={Feed}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/messages' layout={MessagesLayout} component={Messages}></DynamicLayoutRouter>
+      <DynamicLayoutRouter  exact path='/communities' layout={CommunitiesLayout} component={Communities}></DynamicLayoutRouter>
       
       <Route render={() => <Redirect to="/feeds" />} />
 

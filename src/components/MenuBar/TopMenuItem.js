@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { NavLink } from 'react-router-dom'
 const TopMenuItem = (props) => {
 
-    const {icon, text, active, search, className} = props
+    const {route, icon, text, search, className} = props
     return (
-        <Item search={search} className={className} active={active}>
+        <Item to={route} search={search} className={className}>
             <div className="icon">
                 <img src={icon} alt="" />
             </div>
@@ -14,7 +15,12 @@ const TopMenuItem = (props) => {
     )
 }
 
-const Item = styled.button`
+const Item = styled(NavLink)`
+    color: var(--color-grey);
+    &.active {
+        background: #fff;
+        color: var(--color-black);
+    }
     ${({search}) => search && `
         display:none;
     `}
@@ -25,9 +31,6 @@ const Item = styled.button`
     align-items: center;
     cursor: pointer;
     background: var(--color-background);
-    ${({active}) => active && `
-        background: #fff;
-    `}
 
     &:hover {
         background: #fff;
@@ -47,8 +50,8 @@ const Item = styled.button`
 `
 
 TopMenuItem.propTypes = {
+    route: PropTypes.string,
     icon: PropTypes.string,
     text: PropTypes.string,
-    active: PropTypes.bool,
 }
 export default TopMenuItem

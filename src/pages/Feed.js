@@ -3,6 +3,7 @@ import { metaTags } from 'src/helpers/seo';
 import React, { Component } from 'react'
 import {ErrorBoundary} from 'react-error-boundary'
 import ErrorFallback from 'src/components/Errors/ErrorFallback';
+import { FeedPostsWrapper } from 'src/components/FeedPost';
 
 class Feed extends Component {
 
@@ -18,9 +19,8 @@ class Feed extends Component {
                     />
                     
                 </ErrorBoundary>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quo dolore ex nihil cumque, harum, perspiciatis dicta placeat pariatur eveniet suscipit qui neque reprehenderit doloremque illum tenetur est ut vitae.
-                {/* <MainLayout>
-                </MainLayout> */}
+                <FeedPostsWrapper />
+
             </>
         )
     }

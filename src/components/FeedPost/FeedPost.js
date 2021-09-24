@@ -49,7 +49,7 @@ const Wrapper = styled.a`
 
     }
     display: flex;
-    padding: 1.313rem 1.875rem;
+    padding: 1.313rem 0;
     &:not(:last-child) {
         border-bottom: 1px dashed #ddd;
     }

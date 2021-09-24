@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import FeedPostsWrapper from '../../components/FeedPost/FeedPostsWrapper'
-import Filters from '../../components/MenuBar/Filters'
-import TopMenu from '../../components/MenuBar/TopMenu'
+import Filters from 'src/components/MenuBar/Filters'
+import TopMenu from 'src/components/MenuBar/TopMenu'
 
 const MainContent = ({children}) => {
 
@@ -10,8 +9,10 @@ const MainContent = ({children}) => {
         <Wrapper >
             <TopMenu></TopMenu>
             <Filters></Filters>
-            <FeedPostsWrapper></FeedPostsWrapper>
-            {children}
+            <Content>
+                {children}
+
+            </Content>
         </Wrapper>
     )
 }
@@ -23,5 +24,9 @@ const Wrapper = styled.div`
     filter: drop-shadow(0px 4px 12px rgba(104, 118, 132, 0.1));
 
     
+`
+
+const Content = styled.div`
+    padding: 0 1.875rem;
 `
 export default MainContent
