@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import {ContentPlainText, Title, TotalInteractions} from '.'
+import {ContentPlainText, Title, TotalInteractions} from './'
 
 const FeedPost = (props) => {
 

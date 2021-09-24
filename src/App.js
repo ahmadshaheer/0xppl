@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import Store from './Store'
 import Router from './router'
 import { HelmetProvider } from 'react-helmet-async'
@@ -9,9 +9,9 @@ const App = () => {
     <Store>
       <ErrorBoundary>
         <HelmetProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Router />
-          </BrowserRouter>
+          </HashRouter>
         </HelmetProvider>
       </ErrorBoundary>
     </Store>
