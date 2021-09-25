@@ -4,7 +4,7 @@ import verified_badge from 'src/assets/feed_post_profile_verified_badge.png'
 import ellipsis_icon from 'src/assets/ellipsis.png'
 
 import {Context} from 'src/Store'
-
+import { trimText } from 'src/helpers/general'
 const MessagePreviewItem = (props) => {
     
     const {image, 
@@ -13,31 +13,33 @@ const MessagePreviewItem = (props) => {
             address, 
             preview_text, 
             elapsed_time, 
-            paddingInRem, 
             active, 
             unread_messages_count,
             border,
             hoverable,
             cursorPointer,
-            settings
+            settings,
+            image_size,
+            dont_trim_text,
         } = props
 
     const [state, setState] = useContext(Context);
 
     return (
         <Wrapper 
-            paddingInRem={paddingInRem}
             border={border}
             hoverable={hoverable}
             cursorPointer={cursorPointer}
             settings={settings}
+            image_size={image_size}
+            dont_trim_text={dont_trim_text}
             >
 
-            {/* display active indicator if active = true */}
-            {active && <div className="indicator active-indicator"></div>}
+            {/* display active badge if active = true */}
+            {active && <div className="badge active-badge"></div>}
 
-            {/* display messages count indicator if passed */}
-            {unread_messages_count && <div className="indicator unread-messages-indicator">{unread_messages_count}</div> }
+            {/* display messages count badge if passed */}
+            {unread_messages_count && <div className="badge unread-messages-badge">{unread_messages_count}</div> }
 
             <a href="/" className="profile-image">
                 <img src={image} alt="" />
@@ -48,19 +50,21 @@ const MessagePreviewItem = (props) => {
                     <a href="/" className="name">{name}</a>
                     {verified && <div className="verified"><img src={verified_badge} alt="" /></div>}
                     <div className="address">{address}</div>
+                    <div className="elapsed-time">
+                        {elapsed_time}
+                    </div>
                 </div>
 
                 
                 <div className="preview-text">
-                    {preview_text && preview_text.length > 30 ?
-                        `${preview_text.substring(0, 30)}...` : preview_text
-                    }
+                    {dont_trim_text ? preview_text : trimText(preview_text, 30)}
+                    
                 </div>
 
             </div>
             {settings && <a href="/" className="settings"> </a>}
             <div className="elapsed-time">
-                {elapsed_time}
+                {!dont_trim_text && elapsed_time}
             </div>
         </Wrapper>
     )
@@ -71,6 +75,8 @@ const Wrapper = styled.div`
     align-items: center;
     font-size: 1rem;
     padding:1.25rem 1.875rem;
+    
+
     
     ${({cursorPointer}) => cursorPointer && `
         cursor: pointer;
@@ -92,20 +98,20 @@ const Wrapper = styled.div`
     }
     
 
-    .indicator {
+    .badge {
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-56%);
         
     }
-    .active-indicator {
+    .active-badge {
         background: #000;
         width: 0.375rem;
         height: 3rem;
     }
 
-    .unread-messages-indicator {
+    .unread-messages-badge {
         
         background: #0648D7;
         width: 0.75rem;
@@ -122,12 +128,25 @@ const Wrapper = styled.div`
     color: #687684;
     .profile-image {
         img {
-            height: 3rem;
+            ${({image_size}) => image_size === "lg" && `
+                height: 3rem;
+                width: 3rem;
+                
+            `}
+            ${({image_size}) => image_size === "md" && `
+                height: 2.125rem;
+                width: 2.125rem;
+            `}
         }
         margin-right: 0.931rem;
     }
     .profile-details {
-        width: 20rem;
+        ${({dont_trim_text}) => dont_trim_text && `
+            flex-basis: 1;
+            .preview-text {
+                width: 37.188rem;
+            }
+        `}
         .top {
             & > {
             }
@@ -149,7 +168,7 @@ const Wrapper = styled.div`
         }
         .preview-text {
             font-size: 1rem;
-            /* color: #687684; */
+            line-height: 1.375rem;
             
 
         }

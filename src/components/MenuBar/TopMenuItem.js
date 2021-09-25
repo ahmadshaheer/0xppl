@@ -4,13 +4,16 @@ import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 const TopMenuItem = (props) => {
 
-    const {route, icon, text, search, className} = props
+    const {route, icon, text, search, className, badge} = props
     return (
         <Item to={route} search={search} className={className}>
             <div className="icon">
                 <img src={icon} alt="" />
             </div>
-            <div className="title">{text}</div>
+            <div className="title">
+                {text}
+            </div>
+            {badge && <div className="badge">{badge}</div>}
         </Item>
     )
 }
@@ -46,6 +49,18 @@ const Item = styled(NavLink)`
         font-weight: 600;
         font-size: 0.875rem;
         line-height: 1rem;
+        margin-right: 0.625rem;
+    }
+    .badge {
+        height: 0.75rem;
+        width: 0.75rem;
+        background: #0648D7;
+        color: #fff;
+        font-size: 0.625rem;
+        font-weight:700;
+        text-align: center;
+        vertical-align: middle;
+        border: none;
     }
 `
 

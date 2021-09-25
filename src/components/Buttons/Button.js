@@ -49,6 +49,10 @@ const ButtonWrapper = styled.button`
         padding-left: ${paddingInRem.left}rem;
     `}
     
+    ${({heightInRem}) => heightInRem !== undefined && `
+        height: ${heightInRem}rem;
+    `}
+    
     ${({color}) => color !== undefined && `
         color: ${color};
         &:hover {
@@ -76,6 +80,12 @@ const ButtonWrapper = styled.button`
         border-width: ${border.widthInRem}rem;
         border-color: ${border.color};
         border-style: ${border.style};
+    ` : 'border:none;'}
+
+    ${({borderBottom}) => borderBottom ? `
+        border-bottom-width: ${borderBottom.widthInRem}rem;
+        border-bottom-color: ${borderBottom.color};
+        border-bottom-style: ${borderBottom.style};
     ` : 'border:none;'}
 
     

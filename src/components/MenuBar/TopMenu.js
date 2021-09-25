@@ -38,6 +38,7 @@ const TopMenu = () => {
                 text="MESSAGES" 
                 icon={messages_icon}
                 route="/messages"  
+                badge={3}
                 
             />
             <SearchBar />            
