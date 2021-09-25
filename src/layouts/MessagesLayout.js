@@ -1,8 +1,7 @@
+import { MessagesLayoutLeftSidebar, MessagesLayoutRightSidebar } from 'src/components/Messages'
 import React from 'react'
 import Layout from './Components/Layout'
 import MainContent from './Components/MainContent'
-import { MessagesLayoutRightSidebar } from 'src/components/Sidebars/Messages'
-import { MessagesLayoutLeftSidebar } from 'src/components/Sidebars/Messages'
 
 const MessagesLayout = ({children}) => {
     return (
