@@ -11,11 +11,13 @@ const MessagesLayout = ({children}) => {
                 topLogo={true}
                 leftSidebar= {
                     {
+                        sticky:false,
                         topInRem:5.438,
                         leftInRem: 2.5,
                         widthInRem:27.875,
                         background: "#fff",
-                        contentsComponent: MessagesLayoutLeftSidebar
+                        contentsComponent: MessagesLayoutLeftSidebar,
+                        minHeightRem:20,
                     }
                 }
 

@@ -19,6 +19,7 @@ class Feed extends Component {
                     />
                     
                 </ErrorBoundary>
+                
                 <FeedPostsWrapper />
 
             </>

@@ -53,6 +53,10 @@ const Wrapper = styled.div`
         height: 100%;
     ` : `height: fit-content;`}
     
+    ${({minHeightRem}) => minHeightRem && `
+        min-height: ${minHeightRem}rem;
+    `}
+    
     ${({heightInRem}) => heightInRem !== undefined && `
         height: ${heightInRem}rem;
     `}
