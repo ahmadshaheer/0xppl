@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Filters from 'src/components/MenuBar/Filters'
 import TopMenu from 'src/components/MenuBar/TopMenu'
 
 const MainContent = ({children, widthInRem}) => {
@@ -8,7 +7,6 @@ const MainContent = ({children, widthInRem}) => {
     return (
         <Wrapper widthInRem={widthInRem}>
             <TopMenu></TopMenu>
-            <Filters></Filters>
             <Content>
                 {children}
 
@@ -22,7 +20,7 @@ const Wrapper = styled.div`
     ${({widthInRem}) => widthInRem ? `
         width: ${widthInRem}rem;
     ` : `width: 45rem;`}
-    min-height: 55rem;
+    min-height: 97vh;
     margin: 0 auto;
 
 

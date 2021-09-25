@@ -34,6 +34,6 @@ const Wrapper = styled.div`
         justify-content: ${justifyContent};
     `}; */
     margin-top: 1.25rem;
-    height: 1400px;
+    /* height: 1400px; */
 `
 export default Layout

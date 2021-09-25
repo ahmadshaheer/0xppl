@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import {ErrorBoundary} from 'react-error-boundary'
 import ErrorFallback from 'src/components/Errors/ErrorFallback';
 import { FeedPostsWrapper } from 'src/components/FeedPost';
+import { Filters } from 'src/components/MenuBar';
 
 class Feed extends Component {
 
@@ -19,7 +20,8 @@ class Feed extends Component {
                     />
                     
                 </ErrorBoundary>
-                
+                <Filters></Filters>
+
                 <FeedPostsWrapper />
 
             </>

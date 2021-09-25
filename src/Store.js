@@ -4,6 +4,7 @@ const initialState = {
     search_bar_expanded: false,
     display_search_result_dropdown: false,
     search_term: "",
+    selected_user_messages: "",
 }
 
 export const Context = React.createContext();
