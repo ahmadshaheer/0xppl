@@ -29,7 +29,7 @@ const FeedPostsWrapper = () => {
     )
 }
 const Wrapper = styled.div`
-
+    padding:0 1.875rem;
 `
 
 

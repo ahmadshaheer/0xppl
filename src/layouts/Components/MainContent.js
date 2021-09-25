@@ -32,6 +32,6 @@ const Wrapper = styled.div`
 `
 
 const Content = styled.div`
-    padding: 0 1.875rem;
+    /* padding: 0 1.875rem; */
 `
 export default MainContent

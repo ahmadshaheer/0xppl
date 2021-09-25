@@ -1,72 +1,96 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import {MessagePreviewUserInfo} from '.'
 import verified_badge from 'src/assets/feed_post_profile_verified_badge.png'
+import ellipsis_icon from 'src/assets/ellipsis.png'
 
 import {Context} from 'src/Store'
 
 const MessagePreviewItem = (props) => {
     
-    const {handleClick, image, name, verified, address, preview_text, elapsed_time, paddingInRem, active, unread_messages_count} = props
+    const {image, 
+            name, 
+            verified, 
+            address, 
+            preview_text, 
+            elapsed_time, 
+            paddingInRem, 
+            active, 
+            unread_messages_count,
+            border,
+            hoverable,
+            cursorPointer,
+            settings
+        } = props
 
     const [state, setState] = useContext(Context);
 
     return (
         <Wrapper 
-            onClick={handleClick}
-            margin={paddingInRem}>
+            paddingInRem={paddingInRem}
+            border={border}
+            hoverable={hoverable}
+            cursorPointer={cursorPointer}
+            settings={settings}
+            >
 
             {/* display active indicator if active = true */}
             {active && <div className="indicator active-indicator"></div>}
 
             {/* display messages count indicator if passed */}
             {unread_messages_count && <div className="indicator unread-messages-indicator">{unread_messages_count}</div> }
-            <div className="profile-image">
+
+            <a href="/" className="profile-image">
                 <img src={image} alt="" />
-            </div>
+            </a>
+            
             <div className="profile-details">
                 <div className="top">
-                    <div className="name">{name}</div>
+                    <a href="/" className="name">{name}</a>
                     {verified && <div className="verified"><img src={verified_badge} alt="" /></div>}
                     <div className="address">{address}</div>
                 </div>
 
                 
                 <div className="preview-text">
-                    {preview_text.length > 30 ?
+                    {preview_text && preview_text.length > 30 ?
                         `${preview_text.substring(0, 30)}...` : preview_text
                     }
                 </div>
+
             </div>
+            {settings && <a href="/" className="settings"> </a>}
             <div className="elapsed-time">
                 {elapsed_time}
             </div>
         </Wrapper>
     )
 }
-const Wrapper = styled.a`
+const Wrapper = styled.div`
     position: relative;
-    cursor: pointer;
     display: flex;
     align-items: center;
     font-size: 1rem;
     padding:1.25rem 1.875rem;
-    border-top: 1px dashed #BDC5CD;
-    &:hover {
-        background: #F8F8F9;
-    }
+    
+    ${({cursorPointer}) => cursorPointer && `
+        cursor: pointer;
+    `}
+    ${({border}) => border && `
+        border-${border}: 1px dashed #BDC5CD;
+    `}
+
+    ${({hoverable}) => hoverable && `
+        &:hover {
+            background: #F8F8F9;
+            cursor: pointer;
+        }    
+    `}
     &:not(:first-child) {
         border-top: 1px dashed #BDC5CD;
         
 
     }
     
-    ${({paddingInRem}) => paddingInRem && `
-        padding-top: ${paddingInRem.top},
-        padding-right: ${paddingInRem.right},
-        padding-bottom: ${paddingInRem.bottom},
-        padding-left: ${paddingInRem.left},
-    `}
 
     .indicator {
         position: absolute;
@@ -103,7 +127,7 @@ const Wrapper = styled.a`
         margin-right: 0.931rem;
     }
     .profile-details {
-        width: 16.563rem;
+        width: 20rem;
         .top {
             & > {
             }
@@ -130,6 +154,21 @@ const Wrapper = styled.a`
 
         }
     }
+    .settings {
+        position: absolute;
+        right: 1.875rem;
+        &:hover {
+            background-color: #F8F8F9;            
+        }
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+        background: url(${ellipsis_icon});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1rem;
+    }
+    
     .elapsed-time {
         /* color: #687684; */
         width: 3rem;

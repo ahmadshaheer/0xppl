@@ -1,4 +1,5 @@
-import { MessagesLayoutLeftSidebar, MessagesLayoutRightSidebar } from 'src/components/Messages'
+// import { MessagesLayoutLeftSidebar, MessagesLayoutRightSidebar } from 'src/components/Messages'
+import { MessagesLayoutLeftSidebar, MessagesLayoutRightSidebar } from 'src/components/Sidebars/Messages'
 import React from 'react'
 import Layout from './Components/Layout'
 import MainContent from './Components/MainContent'
