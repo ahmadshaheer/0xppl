@@ -1,4 +1,4 @@
-import MainLayoutLeftSidebar from './MainLayoutLeftSidebar'
-import MainLayoutRightSidebar from './MainLayoutRightSidebar'
+import LeftSidebar from './LeftSidebar'
+import RightSidebar from './RightSidebar'
 
-export {MainLayoutLeftSidebar, MainLayoutRightSidebar}
+export {LeftSidebar, RightSidebar}

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import profile_img from 'src/assets//default-profile-img.png'
 import logo from 'src/assets/0xppl-logo.png'
 
-const MainLayoutLeftSidebar = () => {
+const LeftSidebar = () => {
     return (
         <Wrapper>
             <img className="profile-img" src={profile_img} alt="" />
@@ -43,7 +43,7 @@ export const leftSidebarProperties = {
     sticky:true,
     widthInRem:14.125,
     marginRightInRem:7, 
-    contentsComponent: MainLayoutLeftSidebar
+    contentsComponent: LeftSidebar
 }
 
 
@@ -86,4 +86,4 @@ const Wrapper = styled.div`
     }
 `
 
-export default MainLayoutLeftSidebar
+export default LeftSidebar

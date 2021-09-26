@@ -2,8 +2,8 @@ import React from 'react'
 import MainContent from './Components/MainContent'
 
 import Layout from './Components/Layout'
-import {leftSidebarProperties} from 'src/components/Sidebars/Main/MainLayoutLeftSidebar'
-import {rightSidebarProperties} from 'src/components/Sidebars/Main/MainLayoutRightSidebar'
+import {leftSidebarProperties} from 'src/components/Sidebars/Main/LeftSidebar'
+import {rightSidebarProperties} from 'src/components/Sidebars/Main/RightSidebar'
 const MainLayout = ({children}) => {
     return (
             <Layout

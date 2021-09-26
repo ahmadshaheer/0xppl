@@ -1,6 +1,6 @@
-import MessagesLayoutRightSidebar from "./MessagesLayoutRightSidebar";
-import MessagesLayoutLeftSidebar from "./MessagesLayoutLeftSidebar";
+import RightSidebar from "./RightSidebar";
+import LeftSidebar from "./LeftSidebar";
 import MessagePreviewItemsWrapper from "./MessagePreviewItemsWrapper";
 import MessagePreviewItem from "./MessagePreviewItem";
 
-export {MessagesLayoutRightSidebar, MessagesLayoutLeftSidebar, MessagePreviewItemsWrapper, MessagePreviewItem}
+export {RightSidebar, LeftSidebar, MessagePreviewItemsWrapper, MessagePreviewItem}

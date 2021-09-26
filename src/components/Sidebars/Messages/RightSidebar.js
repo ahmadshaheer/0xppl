@@ -1,6 +1,6 @@
 import React from 'react'
 import { WalletHoldingsChart, PersonalDescription, WalletAddress, FollowersStatistics, ConnectedAccountsWrapper } from 'src/components/Profile'
-const MessagesLayoutRightSidebar = () => {
+const RightSidebar = () => {
     return (
         <>
             <WalletAddress 
@@ -40,6 +40,6 @@ export const rightSidebarProperties = {
     rightInRem: 0,
     fullHeight: true,
     background: "#fff",
-    contentsComponent: MessagesLayoutRightSidebar
+    contentsComponent: RightSidebar
 }
-export default MessagesLayoutRightSidebar
+export default RightSidebar

@@ -1,9 +1,9 @@
 import React from 'react'
 import {NewMessageButton} from 'src/components/Buttons';
-import {MessagePreviewItemsWrapper} from './';
+import {MessagePreviewItemsWrapper} from '.';
 import SimpleBarReact  from 'simplebar-react';
 
-const MessagesLayoutLeftSidebar = () => {
+const LeftSidebar = () => {
     
     return (
         <>
@@ -24,7 +24,7 @@ export const leftSidebarProperties = {
     leftInRem: 2.5,
     widthInRem:27.875,
     background: "#fff",
-    contentsComponent: MessagesLayoutLeftSidebar,
+    contentsComponent: LeftSidebar,
     minHeightRem:20,
 }
-export default MessagesLayoutLeftSidebar
+export default LeftSidebar
