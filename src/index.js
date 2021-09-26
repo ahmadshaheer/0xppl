@@ -7,9 +7,9 @@ import Loadable from 'react-loadable';
 
 Loadable.preloadReady().then(() => {
   ReactDOM.render(
-    <React.StrictMode>
+    <React.Fragment>
       <App />
-    </React.StrictMode>,
+    </React.Fragment>,
     document.getElementById('root')
   );
 })

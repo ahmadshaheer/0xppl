@@ -1,20 +1,38 @@
-// import Loading from 'src/components/Loading';
+import Loading from 'src/components/Loading';
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
-import Feed from './pages/Feed';
-import Messages from './pages/Messages';
-import Communities from './pages/Communities';
 import { DynamicLayoutRouter } from 'src/helpers/layouts';
-import {MainLayout, MessagesLayout, CommunitiesLayout} from 'src/layouts';
-// import CommunitiesLayout from 'src/layouts/CommunitiesLayout';
-// import MessagesLayout from 'src/layouts/MessagesLayout';
-// import Loadable from 'react-loadable';
+import Loadable from 'react-loadable';
 
 
-// const Feed = Loadable({
-//   loader: () => import('./pages/Feed' /* webpackChunkName: "Feed" */),
-//   loading: ({ isLoading }) => isLoading && <Loading />,
-// });
+const Feed = Loadable({
+  loader: () => import('src/pages/Feed' /* webpackChunkName: "Feed" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
+
+const Messages = Loadable({
+  loader: () => import('src/pages/Messages' /* webpackChunkName: "Messages" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
+
+const Communities = Loadable({
+  loader: () => import('src/pages/Communities' /* webpackChunkName: "Communities" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
+const MainLayout = Loadable({
+  loader: () => import('src/layouts/MainLayout' /* webpackChunkName: "MainLayout" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
+
+const MessagesLayout = Loadable({
+  loader: () => import('src/layouts/MessagesLayout' /* webpackChunkName: "MessagesLayout" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
+
+const CommunitiesLayout = Loadable({
+  loader: () => import('src/layouts/CommunitiesLayout' /* webpackChunkName: "CommunitiesLayout" */),
+  loading: ({ isLoading }) => isLoading && <Loading />,
+});
 
 
 function Router() {
