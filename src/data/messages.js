@@ -84,6 +84,17 @@ export const sidebar_preview_messages = [
     },
     {
         imageSize:"lg" ,
+        id:1,
+        image:profile_image,
+        name:"flippen.eth",
+        verified:false,
+        address:"",
+        preview_text:"You all ready for what’s next?",
+        elapsed_time:"4m",       
+        
+    },
+    {
+        imageSize:"lg" ,
         id:2,
         image:profile_image2,
         name:"flippen.eth",

@@ -22,7 +22,7 @@ export const leftSidebarProperties = {
     style:{
         top: '5.438rem',
         left: '2.5rem',
-        width: '27.875rem',
+        width: '26.875rem',
         background: '#fff',
         minHeight: '20rem',
         

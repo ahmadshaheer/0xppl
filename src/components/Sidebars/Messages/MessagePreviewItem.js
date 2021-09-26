@@ -36,6 +36,7 @@ const MessagePreviewItem = (props) => {
             imageSize={imageSize}
             dontTrimText={dontTrimText}
             alignItems={alignItems}
+            active={active}
             >
 
             {/* display active badge if active = true */}
@@ -66,9 +67,9 @@ const MessagePreviewItem = (props) => {
 
             </div>
             {settings && <a href="/" className="settings"> </a>}
-            <div className="elapsed-time">
+            {/* <div className="elapsed-time">
                 {!dontTrimText && elapsed_time}
-            </div>
+            </div> */}
         </Wrapper>
     )
 }
@@ -95,11 +96,14 @@ const Wrapper = styled.div`
     display: flex;
     font-size: 1rem;
     padding:1.25rem 1.875rem;
-    
+    background: #fff;
     ${({alignItems}) => alignItems ? `
         align-items: ${alignItems};    
     ` : `align-items: center;`}
     
+    ${({active}) => active && `
+        background: #F8F8F9;
+    `}
     ${({cursorPointer}) => cursorPointer && `
         cursor: pointer;
     `}
@@ -212,9 +216,11 @@ const Wrapper = styled.div`
     
     .elapsed-time {
         /* color: #687684; */
-        width: 3rem;
+        /* width: 3rem; */
         text-align: right;
         font-size: 0.875rem;
+        position: relative;
+        left: 11.375rem;
     }
 `
 
