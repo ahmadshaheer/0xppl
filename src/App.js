@@ -9,7 +9,7 @@ const App = () => {
     <Store>
       <ErrorBoundary>
         <HelmetProvider>
-          <HashRouter>
+          <HashRouter >
             <Router />
           </HashRouter>
         </HelmetProvider>
