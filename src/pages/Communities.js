@@ -1,11 +1,32 @@
-import React from 'react'
+import SeoMeta from 'src/components/SeoMeta';
+import { metaTags } from 'src/helpers/seo';
+import React, { Component } from 'react'
+import {ErrorBoundary} from 'react-error-boundary'
+import ErrorFallback from 'src/components/Errors/ErrorFallback';
+import { FeedPostsWrapper } from 'src/components/FeedPost';
+import { Filters } from 'src/components/MenuBar';
 
-const Communities = () => {
-    return (
-        <div>
-            Communities
-        </div>
-    )
+class Feed extends Component {
+
+    render() {
+        const meta = metaTags('communities');
+        return (
+            <>
+
+                <ErrorBoundary FallbackComponent={ErrorFallback} >
+                    <SeoMeta
+                        title={meta.title}
+                        meta={meta.meta}
+                    />
+                    
+                </ErrorBoundary>
+                <Filters></Filters>
+
+                <FeedPostsWrapper />
+
+            </>
+        )
+    }
 }
 
-export default Communities
+export default Feed

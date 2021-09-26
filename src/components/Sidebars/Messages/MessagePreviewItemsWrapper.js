@@ -7,7 +7,7 @@ const MessagePreviewItemsWrapper = () => {
         <div>
             
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={1}
                 image={profile_image}
                 name="flippen.eth"
@@ -21,7 +21,7 @@ const MessagePreviewItemsWrapper = () => {
                 active
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={2}
                 image={profile_image}
                 name="flippen.eth"
@@ -34,7 +34,7 @@ const MessagePreviewItemsWrapper = () => {
                 unread_messages_count={1}
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={3}
                 image={profile_image}
                 name="flippen.eth"
@@ -48,7 +48,7 @@ const MessagePreviewItemsWrapper = () => {
 
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={2}
                 image={profile_image}
                 name="flippen.eth"
@@ -61,7 +61,7 @@ const MessagePreviewItemsWrapper = () => {
                 unread_messages_count={1}
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={3}
                 image={profile_image}
                 name="flippen.eth"
@@ -75,7 +75,7 @@ const MessagePreviewItemsWrapper = () => {
 
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={4}
                 image={profile_image}
                 name="flippen.eth"
@@ -87,7 +87,7 @@ const MessagePreviewItemsWrapper = () => {
                 hoverable
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={5}
                 image={profile_image}
                 name="flippen.eth"
@@ -99,7 +99,7 @@ const MessagePreviewItemsWrapper = () => {
                 hoverable
             />
             <MessagePreviewItem
-                image_size="lg" 
+                imageSize="lg" 
                 id={6}
                 image={profile_image}
                 name="flippen.eth"

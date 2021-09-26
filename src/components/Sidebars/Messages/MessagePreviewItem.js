@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import verified_badge from 'src/assets/feed_post_profile_verified_badge.png'
 import ellipsis_icon from 'src/assets/ellipsis.png'
 
-import {Context} from 'src/Store'
 import { trimText } from 'src/helpers/general'
 const MessagePreviewItem = (props) => {
     
@@ -15,15 +14,17 @@ const MessagePreviewItem = (props) => {
             elapsed_time, 
             active, 
             unread_messages_count,
+
             border,
             hoverable,
             cursorPointer,
             settings,
-            image_size,
-            dont_trim_text,
+            imageSize,
+            dontTrimText,
+            alignItems,
+            
         } = props
 
-    const [state, setState] = useContext(Context);
 
     return (
         <Wrapper 
@@ -31,8 +32,9 @@ const MessagePreviewItem = (props) => {
             hoverable={hoverable}
             cursorPointer={cursorPointer}
             settings={settings}
-            image_size={image_size}
-            dont_trim_text={dont_trim_text}
+            imageSize={imageSize}
+            dontTrimText={dontTrimText}
+            alignItems={alignItems}
             >
 
             {/* display active badge if active = true */}
@@ -57,14 +59,14 @@ const MessagePreviewItem = (props) => {
 
                 
                 <div className="preview-text">
-                    {dont_trim_text ? preview_text : trimText(preview_text, 30)}
+                    {dontTrimText ? preview_text : trimText(preview_text, 30)}
                     
                 </div>
 
             </div>
             {settings && <a href="/" className="settings"> </a>}
             <div className="elapsed-time">
-                {!dont_trim_text && elapsed_time}
+                {!dontTrimText && elapsed_time}
             </div>
         </Wrapper>
     )
@@ -72,11 +74,12 @@ const MessagePreviewItem = (props) => {
 const Wrapper = styled.div`
     position: relative;
     display: flex;
-    align-items: center;
     font-size: 1rem;
     padding:1.25rem 1.875rem;
     
-
+    ${({alignItems}) => alignItems ? `
+        align-items: ${alignItems};    
+    ` : `align-items: center;`}
     
     ${({cursorPointer}) => cursorPointer && `
         cursor: pointer;
@@ -128,12 +131,12 @@ const Wrapper = styled.div`
     color: #687684;
     .profile-image {
         img {
-            ${({image_size}) => image_size === "lg" && `
+            ${({imageSize}) => imageSize === "lg" && `
                 height: 3rem;
                 width: 3rem;
                 
             `}
-            ${({image_size}) => image_size === "md" && `
+            ${({imageSize}) => imageSize === "md" && `
                 height: 2.125rem;
                 width: 2.125rem;
             `}
@@ -141,7 +144,7 @@ const Wrapper = styled.div`
         margin-right: 0.931rem;
     }
     .profile-details {
-        ${({dont_trim_text}) => dont_trim_text && `
+        ${({dontTrimText}) => dontTrimText && `
             flex-basis: 1;
             .preview-text {
                 width: 37.188rem;

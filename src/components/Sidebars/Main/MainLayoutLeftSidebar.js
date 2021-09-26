@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import profile_img from 'src/assets//default-profile-img.png'
-import logo from 'src/assets//0xppl-logo.png'
+import logo from 'src/assets/0xppl-logo.png'
 
 const MainLayoutLeftSidebar = () => {
     return (
@@ -36,6 +36,17 @@ const MainLayoutLeftSidebar = () => {
         </Wrapper>
     )
 }
+
+export const leftSidebarProperties = {
+    topInRem:5.625,
+    leftInRem: 7.188,
+    sticky:true,
+    widthInRem:14.125,
+    marginRightInRem:7, 
+    contentsComponent: MainLayoutLeftSidebar
+}
+
+
 const Wrapper = styled.div`
     
     .profile-img {

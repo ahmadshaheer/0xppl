@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import wallet_connect_logo from  'src/assets//wallet-icon.png'
-import ConnectWalletsWrapper from './Main/ConnectWalletsWrapper'
+import ConnectWalletsWrapper from 'src/components/Sidebars/Main/ConnectWalletsWrapper'
 const MainLayoutRightSidebar = () => {
     return (
         <Wrapper>
@@ -27,6 +27,16 @@ const MainLayoutRightSidebar = () => {
         </Wrapper>
     )
 }
+
+export const rightSidebarProperties = {
+    sticky: true,
+    widthInRem: 15,
+    topInRem: 12.813,
+    rightInRem: 5.75,
+    marginLeftInRem: 6.25,
+    contentsComponent: MainLayoutRightSidebar
+}
+
 const Wrapper = styled.div`
 
     .connect-wallet-icon {

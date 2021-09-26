@@ -1,33 +1,30 @@
 import React from 'react'
-import  styled  from 'styled-components';
 import {NewMessageButton} from 'src/components/Buttons';
 import {MessagePreviewItemsWrapper} from './';
-import ScrollableContentWrapper from 'src/components/ScrollableContentWrapper';
+import SimpleBarReact  from 'simplebar-react';
 
 const MessagesLayoutLeftSidebar = () => {
     
     return (
-        <Wrapper>
+        <>
             <NewMessageButton />
-            <ScrollableContentWrapper
-                paddingInRem={
-                    {
-                        top: 0,
-                        bottom: 0,
-                        right: 1.25,
-                        left: 1.25,
-                    }
-                }
+            <SimpleBarReact style={{ height: '42.125rem' }}>
 
-                heightInRem={40.75}
-            >
                 <MessagePreviewItemsWrapper />
 
-            </ScrollableContentWrapper>
-        </Wrapper>
+            </SimpleBarReact>            
+        </>
         
     )
 }
-const Wrapper = styled.div`
-`
+
+export const leftSidebarProperties = {
+    sticky:false,
+    topInRem:5.438,
+    leftInRem: 2.5,
+    widthInRem:27.875,
+    background: "#fff",
+    contentsComponent: MessagesLayoutLeftSidebar,
+    minHeightRem:20,
+}
 export default MessagesLayoutLeftSidebar

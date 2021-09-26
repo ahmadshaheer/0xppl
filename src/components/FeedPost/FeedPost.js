@@ -42,7 +42,7 @@ const FeedPost = (props) => {
     )
 }
 
-const Wrapper = styled.a`
+const Wrapper = styled.div`
     cursor: pointer;
     :hover {
         background: var(--color-background);
