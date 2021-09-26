@@ -19,12 +19,14 @@ const LeftSidebar = () => {
 }
 
 export const leftSidebarProperties = {
-    sticky:false,
-    topInRem:5.438,
-    leftInRem: 2.5,
-    widthInRem:27.875,
-    background: "#fff",
+    style:{
+        top: '5.438rem',
+        left: '2.5rem',
+        width: '27.875rem',
+        background: '#fff',
+        minHeight: '20rem',
+        
+    },
     contentsComponent: LeftSidebar,
-    minHeightRem:20,
 }
 export default LeftSidebar

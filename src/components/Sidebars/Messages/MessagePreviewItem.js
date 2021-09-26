@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react'
 import styled from 'styled-components'
 import verified_badge from 'src/assets/feed_post_profile_verified_badge.png'
@@ -15,7 +16,7 @@ const MessagePreviewItem = (props) => {
             active, 
             unread_messages_count,
 
-            border,
+            borderSide,
             hoverable,
             cursorPointer,
             settings,
@@ -28,7 +29,7 @@ const MessagePreviewItem = (props) => {
 
     return (
         <Wrapper 
-            border={border}
+            borderSide={borderSide}
             hoverable={hoverable}
             cursorPointer={cursorPointer}
             settings={settings}
@@ -71,6 +72,24 @@ const MessagePreviewItem = (props) => {
         </Wrapper>
     )
 }
+
+MessagePreviewItem.propTypes = {
+    address: PropTypes.string,
+    alignItems: PropTypes.string,
+    elapsed_time: PropTypes.string,
+    image: PropTypes.string,
+    imageSize: PropTypes.string,
+    name: PropTypes.string,
+    preview_text: PropTypes.string,
+    unread_messages_count: PropTypes.number,
+    active: PropTypes.bool,
+    borderSide: PropTypes.string,
+    cursorPointer: PropTypes.bool,
+    dontTrimText: PropTypes.bool,
+    hoverable: PropTypes.bool,
+    settings: PropTypes.bool,
+    verified: PropTypes.bool
+}
 const Wrapper = styled.div`
     position: relative;
     display: flex;
@@ -84,8 +103,8 @@ const Wrapper = styled.div`
     ${({cursorPointer}) => cursorPointer && `
         cursor: pointer;
     `}
-    ${({border}) => border && `
-        border-${border}: 1px dashed #BDC5CD;
+    ${({borderSide}) => borderSide && `
+        border-${borderSide}: 1px dashed #BDC5CD;
     `}
 
     ${({hoverable}) => hoverable && `

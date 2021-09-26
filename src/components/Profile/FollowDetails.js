@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import {kFormatter} from 'src/helpers/general'
-const FollowDetails = ({count, label, color}) => {
+const FollowDetails = ({count, label, style}) => {
     return (
-        <Wrapper color={color}>
+        <Wrapper style={style}>
             <div className="count">{kFormatter(count)}</div>
             <div className="label">
                 {label}
@@ -16,9 +16,6 @@ const Wrapper = styled.div`
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.5rem;
-    ${({color}) => color && `
-        color: ${color};
-    `}
     .count {
         margin-right: .25rem;
         font-weight: 600;

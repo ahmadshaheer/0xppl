@@ -29,11 +29,13 @@ const RightSidebar = () => {
 }
 
 export const rightSidebarProperties = {
-    sticky: true,
-    widthInRem: 15,
-    topInRem: 12.813,
-    rightInRem: 5.75,
-    marginLeftInRem: 6.25,
+    style: {
+        width: '15rem',
+        top: '12.813rem',
+        right: '5.75rem',
+        marginLeft: '6.25rem',
+    },
+    
     contentsComponent: RightSidebar
 }
 

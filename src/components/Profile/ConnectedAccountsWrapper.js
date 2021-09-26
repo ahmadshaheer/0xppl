@@ -5,9 +5,9 @@ import connected_email_icon from 'src/assets/connected-email-icon.png'
 import connected_twitter_icon from 'src/assets/connected-twitter-icon.png'
 import styled from 'styled-components'
 
-const ConnectedAccountsWrapper = ({marginBottomInRem}) => {
+const ConnectedAccountsWrapper = ({style}) => {
     return (
-        <Wrapper marginBottomInRem={marginBottomInRem}>
+        <Wrapper style={style}>
             <ConnectedAccount 
                 icon={connected_wallet_icon}
                 address="0x43A1…58S1"
@@ -27,10 +27,6 @@ const ConnectedAccountsWrapper = ({marginBottomInRem}) => {
     )
 }
 const Wrapper = styled.div`
-    ${({marginBottomInRem}) => marginBottomInRem && `
-        margin-bottom: ${marginBottomInRem}rem;
-    `}
-
 `
 
 export default ConnectedAccountsWrapper

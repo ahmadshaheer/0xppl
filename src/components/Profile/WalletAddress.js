@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const WalletAddress = ({address, marginBottomInRem}) => {
+const WalletAddress = ({style, address, marginBottomInRem}) => {
     return (
-        <Wrapper marginBottomInRem={marginBottomInRem}>
+        <Wrapper style={style}>
             <div className="prefix">
                 <span>0x</span>p
             </div>
@@ -20,9 +20,6 @@ const Wrapper = styled.div`
     font-weight: 800;
     line-height: 2.639rem;
     letter-spacing: 0.019rem;
-    ${({marginBottomInRem}) => marginBottomInRem && `
-        margin-bottom: ${marginBottomInRem}rem;
-    `}
     span {
         font-weight: 400;
 

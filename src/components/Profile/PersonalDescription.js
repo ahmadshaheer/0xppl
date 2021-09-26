@@ -2,20 +2,17 @@ import { RoundedOutlineButton } from 'src/components/Buttons'
 import React from 'react'
 import styled from 'styled-components'
 
-const PersonalDescription = ({name, description, updatable, marginBottomInRem}) => {
+const PersonalDescription = ({name, description, updatable, style}) => {
     return (
-        <Wrapper marginBottomInRem={marginBottomInRem}>
+        <Wrapper style={style}>
             <div className="name">{name}</div>
             <div className="description">{description}</div>
-            {updatable && <RoundedOutlineButton color="#0648D7" text="UPDATE PROFILE" />  }
+            {updatable && <RoundedOutlineButton label="UPDATE PROFILE" />  }
         </Wrapper>
     )
 }
 const Wrapper = styled.div`
     line-height: 0.938rem;
-    ${({marginBottomInRem}) => marginBottomInRem && `
-        margin-bottom: ${marginBottomInRem}rem;
-    `}
     .name {
         font-size: 0.875rem;
         font-weight: 700;

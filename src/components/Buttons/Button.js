@@ -21,38 +21,6 @@ const ButtonWrapper = styled.button`
         }
     `}
     
-    ${({fontSizeInRem}) => fontSizeInRem !== undefined && `
-        font-size: ${fontSizeInRem}rem;
-    `}
-    
-    ${({fontWeight}) => fontWeight !== undefined && `
-        font-weight: ${fontWeight};
-    `}
-    
-    ${({borderRadiusInRem}) => borderRadiusInRem !== undefined && `
-        border-radius: ${borderRadiusInRem}rem;
-    `}
-
-    /**
-        paddingInRem: {
-            top: 1,
-            right: 1,
-            bottom: 1,
-            left: 1,
-        }
-     * */
-    
-    ${({paddingInRem}) => paddingInRem !== undefined && `
-        padding-top: ${paddingInRem.top}rem;
-        padding-right: ${paddingInRem.right}rem;
-        padding-bottom: ${paddingInRem.bottom}rem;
-        padding-left: ${paddingInRem.left}rem;
-    `}
-    
-    ${({heightInRem}) => heightInRem !== undefined && `
-        height: ${heightInRem}rem;
-    `}
-    
     ${({color}) => color !== undefined && `
         color: ${color};
         &:hover {
@@ -67,38 +35,13 @@ const ButtonWrapper = styled.button`
         }
     `}
     
-    ${({block}) => block && `
-        display: block;
-        width: 100%;
-    `}
-    
-    ${({textAlign}) => textAlign !== undefined && `
-        text-align: ${textAlign};
-    `}
-
-    ${({border}) => border ? `
-        border-width: ${border.widthInRem}rem;
-        border-color: ${border.color};
-        border-style: ${border.style};
-    ` : 'border:none;'}
-
-    ${({borderBottom}) => borderBottom ? `
-        border-bottom-width: ${borderBottom.widthInRem}rem;
-        border-bottom-color: ${borderBottom.color};
-        border-bottom-style: ${borderBottom.style};
-    ` : 'border:none;'}
-
     
 `
 
 Button.propTypes = {
     background: PropTypes.string,
-    fontSizeInRem: PropTypes.number,
-    fontWeight: PropTypes.number,
-    borderRadiusInRem: PropTypes.number,
     color: PropTypes.string,
-    block: PropTypes.bool,
-    paddingInRem: PropTypes.object
+    hover: PropTypes.object,
 }
 
 

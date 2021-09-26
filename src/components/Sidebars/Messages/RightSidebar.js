@@ -5,22 +5,38 @@ const RightSidebar = () => {
         <>
             <WalletAddress 
                 address="MarcA"
-                marginBottomInRem={1.188}
+                style={
+                    {
+                        marginBottom: "1.188rem"
+                    }
+                }
                 />
 
             <ConnectedAccountsWrapper
-                marginBottomInRem={1.938}
+                style={
+                    {
+                        marginBottom: "1.938rem"
+                    }
+                }
                 />
 
             <PersonalDescription 
-                marginBottomInRem={0.813}
+                style={
+                    {
+                        marginBottom: "0.813rem"
+                    }
+                }
                 name="Marc Andreessen"
                 description="I think the historical comparison to Jules Verne is very apt. This is going to be simply explained by stages of economic development. As you're alluding, America was the dynamic new force on the economic stage at that point. "
                 updatable={true}
                 />
                 
             <FollowersStatistics
-                marginBottomInRem={3.75}
+                style={
+                    {
+                        marginBottom: "3.75rem"
+                    }
+                }
                 following={0}
                 followers={28400}
             />
@@ -30,16 +46,19 @@ const RightSidebar = () => {
     )
 }
 export const rightSidebarProperties = {
-    paddingTopInRem: 3.688,
-    paddingBottomInRem: 4.25,
-    paddingRightInRem: 4.625,
-    paddingLeftInRem: 4.813,
-    widthInRem: 11.375,
-    topInRem: 0,
-    bottomInRem: 0,
-    rightInRem: 0,
-    fullHeight: true,
-    background: "#fff",
+    style: {
+        paddingTop: '3.688rem',
+        paddingBottom: '4.25rem',
+        paddingRight: '4.625rem',
+        paddingLeft: '4.813rem',
+        width: '11.375rem',
+        top: '0',
+        bottom: '0',
+        right: '0',
+        height: '100%',
+        background: "#fff",
+
+    },
     contentsComponent: RightSidebar
 }
 export default RightSidebar

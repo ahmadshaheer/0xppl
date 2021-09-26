@@ -3,19 +3,18 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {ContentPlainText, Title, TotalInteractions} from './'
 
-const FeedPost = (props) => {
+const FeedPost = ({
+                image, 
+                name, 
+                verified, 
+                username, 
+                transaction, 
+                duration, 
+                type, 
+                comments_count, 
+                likes_count, 
+                content}) => {
 
-    const {
-        image, 
-        name, 
-        verified, 
-        username, 
-        transaction, 
-        duration, 
-        type, 
-        comments_count, 
-        likes_count, 
-        content} = props
     return (
         <Wrapper>
             <div className="profile-image">
@@ -67,16 +66,16 @@ const Wrapper = styled.div`
 `
 
 FeedPost.propTypes = {
-    image: PropTypes.string,
-    name: PropTypes.string,
-    verified: PropTypes.bool,
-    username: PropTypes.string,
-    transaction: PropTypes.object,
-    duration: PropTypes.string,
-    type: PropTypes.string,
-    likes_count: PropTypes.number,
-    comments_count: PropTypes.number,
-    content: PropTypes.string,
+  comments_count: PropTypes.number,
+  content: PropTypes.string,
+  duration: PropTypes.string,
+  image: PropTypes.string,
+  likes_count: PropTypes.number,
+  name: PropTypes.string,
+  transaction: PropTypes.object,
+  type: PropTypes.string,
+  username: PropTypes.string,
+  verified: PropTypes.bool
 }
 
 export default FeedPost

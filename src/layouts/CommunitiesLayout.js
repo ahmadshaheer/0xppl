@@ -12,7 +12,7 @@ const MainLayout = ({children}) => {
                 rightSidebar={rightSidebarProperties}
             >
             
-                <MainContent widthInRem={46.563} children={children} />
+                <MainContent style={{width: '46.563rem'}} children={children} />
 
             </Layout>
     )

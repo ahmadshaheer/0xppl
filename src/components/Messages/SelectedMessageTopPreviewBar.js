@@ -10,7 +10,7 @@ const SelectedMessageTopPreviewBar = () => {
             name="flippen.eth"
             verified={true}
             address="0xPras"
-            border="bottom"
+            borderSide="bottom"
             hoverable={false}
             settings
             cursorPointer={false}

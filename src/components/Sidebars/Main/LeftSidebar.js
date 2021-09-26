@@ -38,11 +38,12 @@ const LeftSidebar = () => {
 }
 
 export const leftSidebarProperties = {
-    topInRem:5.625,
-    leftInRem: 7.188,
-    sticky:true,
-    widthInRem:14.125,
-    marginRightInRem:7, 
+    style: {
+        top:'5.625rem',
+        left:' 7.188rem',
+        width:'14.125rem',
+        marginRight:'7rem', 
+    },
     contentsComponent: LeftSidebar
 }
 
