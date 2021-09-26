@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import search_icon from 'src/assets//topmenu-search-icon.png'
 import close_search_icon from 'src/assets//topmenu-search-close-icon.png'
 import {Context} from 'src/Store'
-import SearchResultDropdown from './SearchResultDropdown'
+import SearchResultSuggestionsDropdown from './SearchResultSuggestionsDropdown'
 
 const SearchBar = () => {
     const [state, setState] = useContext(Context);
@@ -30,7 +30,7 @@ const SearchBar = () => {
 
         </SearchWrapper>
         
-        <SearchResultDropdown />
+        <SearchResultSuggestionsDropdown />
         </>
     )
 }

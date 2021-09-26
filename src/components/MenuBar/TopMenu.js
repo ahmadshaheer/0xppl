@@ -52,6 +52,7 @@ const Wrapper = styled.div`
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 9;
 
     /**
         * handle the active menu:

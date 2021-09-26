@@ -2,9 +2,9 @@ import React from 'react'
 // search result data
 import {people_search_results, activity_search_result} from 'src/data/search_result.js'
 import styled from 'styled-components'
-import {SearchResultWrapper} from './'
+import {SearchResultWrapper} from '.'
 
-const SearchResultDropdown = () => {
+const SearchResultSuggestionsDropdown = () => {
     return (
         <Wrapper className="search-result-wrapper">
             <SearchResultWrapper
@@ -35,4 +35,4 @@ const Wrapper = styled.div`
     
 `
 
-export default SearchResultDropdown
+export default SearchResultSuggestionsDropdown
